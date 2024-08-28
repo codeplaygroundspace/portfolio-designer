@@ -65,7 +65,7 @@ function Project({ title, page, img, tags }: ProjectProps) {
           {tags.map((tag, i) => (
             <div
               key={i}
-              className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-1"
+              className="inline-flex items-center mb-2 rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-1"
             >
               {tag}
             </div>
@@ -80,7 +80,7 @@ function Header() {
   return (
     <section>
       <Image
-        src="/logo.png"
+        src="/logo.svg"
         alt="Logo"
         className="dark:invert"
         width={60}
@@ -93,11 +93,11 @@ function Header() {
 
 function Intro() {
   return (
-    <section className="flex gap-8 flex-col my-24 max-w-3xl">
+    <section className="flex gap-8 flex-col my-24 lg:max-w-3xl">
       <h1 className="text-4xl lg:text-6xl font-medium">
         Hey, I’m Rosina Pissaco —<br /> I’m a Product Designer based in Bristol
       </h1>
-      <h2 className="font-medium pr-20">
+      <h2 className="font-medium lg:pr-20">
         Currently, I’m the only Product Designer at NestEgg, a bootstrapped
         startup building a platform that helps our customers take better
         financial decisions. I work across the full end to end design process
@@ -121,6 +121,28 @@ function Experiences() {
             tags={ex.tags}
           />
         ))}
+      </div>
+      <div className="inline-flex align-bottom gap-2 items-center">
+        <svg
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        <a
+          className="font-medium"
+          href="https://drive.google.com/file/d/1oUYhhfmKh6CQ7khCfM8Z0DaMl4Rid2S2/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Download Resume</span>
+        </a>
       </div>
     </aside>
   );
