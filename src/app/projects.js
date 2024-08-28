@@ -1,35 +1,30 @@
 const projects = [
   {
-    title:
-      "🔒 How I designed a testing platform that increased efficiency by 35%",
+    title: "Testing dashboard powered by AI",
     page: "dw.com",
     tags: ["B2B", "Software QA"],
     img: "/portfolio_thumbnail/01.jpg",
   },
   {
-    title:
-      "🔒 How I designed a testing platform that increased efficiency by 35%",
+    title: "Your personalised cycling coach app",
     page: "dw.com",
     tags: ["B2B", "Software QA"],
     img: "/portfolio_thumbnail/01.jpg",
   },
   {
-    title:
-      "🔒 How I designed a testing platform that increased efficiency by 35%",
+    title: "Music clips for messages",
     page: "dw.com",
     tags: ["B2B", "Software QA"],
     img: "/portfolio_thumbnail/01.jpg",
   },
   {
-    title:
-      "🔒 How I designed a testing platform that increased efficiency by 35%",
+    title: "A Syndicate Lottery App",
     page: "dw.com",
     tags: ["B2B", "Software QA"],
     img: "/portfolio_thumbnail/01.jpg",
   },
   {
-    title:
-      "🔒 How I designed a testing platform that increased efficiency by 35%",
+    title: "Enhanced ID and Bounce App",
     page: "dw.com",
     tags: ["B2B", "Software QA"],
     img: "/portfolio_thumbnail/01.jpg",
