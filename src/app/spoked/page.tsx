@@ -51,19 +51,19 @@ export default function Spoked() {
         <section>
           <h2>User observation</h2>
           <p>
-            We ran a user research session to observe users navigating the sales
-            journeys of competitors that already offer similar product ranges.
-            From this study we discovered the following insights:
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quod
+            adipisci, obcaecati quia nobis delectus amet alias at ullam
+            reprehenderit minus hic cumque, saepe velit voluptas numquam natus
+            dolorem expedita.
           </p>
         </section>
         <section>
           <h2>Designing the solution</h2>
           <p>
-            Solution design involved lots of iteration and user testing. High
-            level logic was mapped out on whiteboards followed by prototypes. We
-            explored a wide range of options, particularly around the displaying
-            of delivery details. The challange was trying to present complex
-            delivery details and options in a simple and easy to understand way.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quod
+            adipisci, obcaecati quia nobis delectus amet alias at ullam
+            reprehenderit minus hic cumque, saepe velit voluptas numquam natus
+            dolorem expedita.
           </p>
         </section>
         <section>
@@ -80,13 +80,10 @@ export default function Spoked() {
         <section>
           <h2>The result</h2>
           <p>
-            The final design overhauled the way Matalan presents order summaries
-            and delivery options. The checkout split orders into individual
-            deliveries with estimates and types of delivery clearly explained.
-            Progress tracking in the checkout was simplified and the number of
-            steps reduced. Optimising the overall checkout experience mean't the
-            checkout did not suffer from the potential increase in complexity of
-            delivery SLAs.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quod
+            adipisci, obcaecati quia nobis delectus amet alias at ullam
+            reprehenderit minus hic cumque, saepe velit voluptas numquam natus
+            dolorem expedita.
           </p>
         </section>
       </div>
