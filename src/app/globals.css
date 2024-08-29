@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+h1 {
+  @apply text-4xl lg:text-6xl font-medium mb-8;
+}
+h2 {
+  @apply text-3xl lg:text-4xl font-medium mb-4;
+}
+h3 {
+  @apply text-2xl lg:text-3xl font-medium mb-2;
+}
+h4 {
+  /* @apply text-lg lg:text-2xl font-medium; */
+}
+p {
+  /* @apply font-medium; */
+}
