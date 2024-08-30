@@ -53,16 +53,19 @@ function Projects() {
 function Project({ title, page, img, tags }: ProjectProps) {
   return (
     <Link href={page}>
-      <article className="flex gap-6">
-        <Image
-          src={img}
-          alt={title}
-          className="rounded-md"
-          width={230}
-          height={200}
-          priority
-        />
-        <div className="flex flex-col gap-4">
+      <article className="flex gap-6 flex-col sm:flex-row">
+        <div className="lg:max-w-[230px]">
+          <Image
+            src={img}
+            alt={title}
+            className="rounded-md"
+            layout="responsive"
+            width={230}
+            height={200}
+            priority
+          />
+        </div>
+        <div className="flex flex-col gap-1 lg:gap-2">
           <h3>{title}</h3>
           <div>
             {tags.map((tag, i) => (
