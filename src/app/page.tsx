@@ -2,6 +2,7 @@ import Image from "next/image";
 import projects from "./projects";
 import experiences from "./experiences";
 import Link from "next/link";
+import Header from "./components/Header";
 
 // Define an interface for the Project props
 interface ProjectProps {
@@ -19,17 +20,17 @@ interface ExperienceProps {
 
 export default function Home() {
   return (
-    <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+    <div className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
       <Header />
-      <section>
+      <div>
         <Intro />
-        <div className="flex flex-col lg:flex-row gap-24">
+        <div className="flex flex-col lg:flex-row mt-24 gap-16 justify-between">
           <Projects />
           <Experiences />
         </div>
-      </section>
+      </div>
       <Footer />
-    </main>
+    </div>
   );
 }
 
@@ -62,7 +63,7 @@ function Project({ title, page, img, tags }: ProjectProps) {
           priority
         />
         <div className="flex flex-col gap-4">
-          <h3 className="text-xl font-medium">{title}</h3>
+          <h3>{title}</h3>
           <div>
             {tags.map((tag, i) => (
               <div
@@ -79,32 +80,18 @@ function Project({ title, page, img, tags }: ProjectProps) {
   );
 }
 
-function Header() {
-  return (
-    <section>
-      <Image
-        src="/logo.svg"
-        alt="Logo"
-        className="dark:invert"
-        width={60}
-        height={60}
-        priority
-      />
-    </section>
-  );
-}
-
 function Intro() {
   return (
-    <section className="flex gap-8 flex-col my-24 lg:max-w-3xl">
+    <section className="flex gap-8 flex-col  lg:max-w-3xl">
       <h1 className="text-4xl lg:text-6xl font-medium">
-        Hey, I’m Rosina Pissaco —<br /> I’m a Product Designer based in Bristol
+        Hey, I’m Rosina Pissaco
+        <br /> I’m a Product Designer based in Bristol
       </h1>
       <p className="font-medium lg:pr-20">
         Currently, I’m the only Product Designer at NestEgg, a bootstrapped
-        startup building a platform that helps our customers take better
-        financial decisions. I work across the full end to end design process
-        for our B2B, B2C and internal platforms.
+        startup building a platform that helps Credit Unions and Social Banks
+        take better financial decisions. I work across the full end to end
+        design process for our B2B, B2C and internal platforms.
       </p>
     </section>
   );
@@ -112,9 +99,8 @@ function Intro() {
 
 function Experiences() {
   return (
-    <aside className="flex gap-10 flex-col">
+    <aside className="flex gap-10 flex-col  flex-1">
       <h2>Experience</h2>
-
       <div className="flex flex-col gap-8">
         {experiences.map((ex) => (
           <Experience
@@ -154,8 +140,8 @@ function Experiences() {
 function Experience({ role, time, tags }: ExperienceProps) {
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-2">
-        <h3 className="text-xl font-medium">{role}</h3>
+      <div className="flex flex-col">
+        <h4>{role}</h4>
         <p>{time}</p>
       </div>
       <div>

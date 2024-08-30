@@ -3,7 +3,7 @@ import contributions from "../contributions";
 import teamSpoked from "../teams";
 import Header from "../components/Header";
 
-export default function GlobalAppTesting() {
+export default function Hatchster() {
   return (
     <>
       <div className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 text-xl leading-relaxed">
@@ -62,7 +62,7 @@ function EmbeddedVideoThree() {
 function CaseStudy() {
   return (
     <div>
-      <h1>Redesigning Global App Testing </h1>
+      <h1>Redesigning Spoked </h1>
       <div className="flex flex-col gap-12">
         <section>
           <h2>The Product</h2>
