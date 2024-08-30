@@ -24,7 +24,7 @@ export default function Home() {
       <Header />
       <div>
         <Intro />
-        <div className="flex flex-col lg:flex-row mt-24 gap-16 justify-between">
+        <div className="flex flex-col lg:flex-row mt-24 gap-11 justify-between">
           <Projects />
           <Experiences />
         </div>
@@ -56,9 +56,9 @@ function Project({ title, page, img, tags }: ProjectProps) {
       <article className="flex gap-6">
         <Image
           src={img}
-          alt="Preview thumbnail"
-          className="dark:invert rounded-md"
-          width={200}
+          alt={title}
+          className="rounded-md"
+          width={230}
           height={200}
           priority
         />
@@ -68,7 +68,7 @@ function Project({ title, page, img, tags }: ProjectProps) {
             {tags.map((tag, i) => (
               <div
                 key={i}
-                className="inline-flex items-center mb-2 rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-1"
+                className="inline-flex items-center mb-2 rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-2"
               >
                 {tag}
               </div>
@@ -83,7 +83,7 @@ function Project({ title, page, img, tags }: ProjectProps) {
 function Intro() {
   return (
     <section className="flex gap-8 flex-col  lg:max-w-3xl">
-      <h1 className="text-4xl lg:text-6xl font-medium">
+      <h1>
         Hey, I’m Rosina Pissaco
         <br /> I’m a Product Designer based in Bristol
       </h1>
@@ -148,7 +148,7 @@ function Experience({ role, time, tags }: ExperienceProps) {
         {tags.map((tag, i) => (
           <div
             key={i}
-            className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-1"
+            className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-2"
           >
             {tag}
           </div>
@@ -162,10 +162,10 @@ function Footer() {
   return (
     <section className="mt-12">
       <p>hello@rosie.com</p>
-      <p className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-1">
+      <p className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-2">
         Bristol
       </p>
-      <p className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-1">
+      <p className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-2">
         Remote
       </p>
     </section>
