@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ibmPlexSans.className} antialiased max-w-2xl lg:max-w-5xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto`}
+        className={`${ibmPlexSans.className} antialiased max-w-2xl lg:max-w-4xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto`}
       >
         {children}
       </body>
