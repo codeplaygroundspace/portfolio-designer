@@ -37,8 +37,9 @@ function Intro() {
   return (
     <section className="my-grid 2xl:max-w-screen-lg">
       <h1 className="xl:leading-tight xl:pr-20">
-        Hey, I’m Rosina Pissaco
-        <br /> I’m a Product Designer based in Bristol
+        Hey, I’m Rosina
+        <br /> I’m a Product Designer
+        <br /> based in Bristol
       </h1>
       <p className="font-medium pb-24 lg:pr-16 xl:pr-40">
         Currently, I’m the only Product Designer at NestEgg, a bootstrapped

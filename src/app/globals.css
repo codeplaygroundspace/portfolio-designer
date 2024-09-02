@@ -33,7 +33,7 @@ body {
 }
 
 h1 {
-  @apply text-4xl md:text-5xl lg:text-6xl font-medium mb-8;
+  @apply text-5xl md:text-6xl font-medium mb-8;
 }
 h2 {
   @apply font-medium text-3xl lg:text-4xl mb-4 lg:mb-8;
