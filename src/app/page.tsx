@@ -35,7 +35,7 @@ export default function Home() {
 
 function Intro() {
   return (
-    <section className="my-grid">
+    <section className="my-grid 2xl:max-w-screen-lg">
       <h1 className="xl:leading-tight xl:pr-20">
         Hey, I’m Rosina Pissaco
         <br /> I’m a Product Designer based in Bristol

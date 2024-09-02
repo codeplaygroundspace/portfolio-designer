@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ibmPlexSans.className} antialiased grid grid-cols-12 gap-8 px-8 lg:px-16`}
+        className={`${ibmPlexSans.className} antialiased grid grid-cols-12 gap-8 px-4 lg:px-16 2xl:max-w-fit`}
       >
         {children}
       </body>

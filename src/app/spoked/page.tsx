@@ -16,22 +16,20 @@ export default function Spoked() {
 
 function EmbeddedVideoOne() {
   return (
-    <>
+    <div className="video-container">
       <iframe
-        width="560"
-        height="315"
         src="https://www.youtube.com/embed/N7kU7BBNg7c?si=UJgLuqp3PSlrDueB"
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-    </>
+    </div>
   );
 }
 
 function EmbeddedVideoTwo() {
   return (
-    <>
+    <div className="video-container">
       <iframe
         width="560"
         height="315"
@@ -40,13 +38,13 @@ function EmbeddedVideoTwo() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-    </>
+    </div>
   );
 }
 
 function EmbeddedVideoThree() {
   return (
-    <>
+    <div className="video-container">
       <iframe
         width="560"
         height="315"
@@ -55,7 +53,7 @@ function EmbeddedVideoThree() {
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
       ></iframe>
-    </>
+    </div>
   );
 }
 
@@ -96,7 +94,6 @@ function CaseStudy() {
       </section>
 
       <section className="my-grid flex flex-col lg:flex-row gap-4 lg:gap-8">
-        {/* <section className="flex flex-col lg:flex-row gap-24 col-span-12 md:col-span-8 lg:col-span-10 lg:col-start-3 lg:col-end-9 xl:col-span-8 xl:col-start-3 xl:col-end-9"> */}
         <div>
           <h3>My contribution</h3>
           <div>
@@ -124,7 +121,7 @@ function CaseStudy() {
           </div>
         </div>
       </section>
-      <section className="col-span-12">
+      <section className="my-image">
         <Image
           src="/portfolio-spoked/Spoked-intro-case-study.png"
           alt="Spoked"
@@ -162,7 +159,7 @@ function CaseStudy() {
           <li>👉 Different user groups had varied training goals and needs.</li>
         </ul>
       </section>
-      <section className="col-span-12">
+      <section className="my-image">
         <Image
           src="/portfolio-spoked/spoked-Journey-map@2x.jpeg"
           alt="Spoked"
@@ -186,7 +183,7 @@ function CaseStudy() {
           beginners and advanced cyclists.
         </p>
       </section>
-      <section className="col-span-12">
+      <section className="my-image">
         <Image
           src="/portfolio-spoked/spoked-User-flow@2x.jpg"
           alt="Spoked"
@@ -197,7 +194,7 @@ function CaseStudy() {
           priority
         />
       </section>
-      <section className="col-span-12">
+      <section className="my-image">
         <Image
           src="/portfolio-spoked/spoked-Plan-builder@2x.png"
           alt="Spoked"
@@ -207,11 +204,11 @@ function CaseStudy() {
           priority
         />
       </section>
-      <section className="col-span-12 md:col-span-8 lg:col-span-10 lg:col-start-3 lg:col-end-9 xl:col-span-8 xl:col-start-3 xl:col-end-9">
+      <section className="my-image">
         <h3>Prototype</h3>
         <EmbeddedVideoOne />
       </section>
-      <section className="col-span-12 md:col-span-8 lg:col-span-10 lg:col-start-3 lg:col-end-9 xl:col-span-8 xl:col-start-3 xl:col-end-9">
+      <section className="my-image">
         <h3>Hi fidelity screens</h3>
         <EmbeddedVideoTwo />
       </section>
@@ -224,7 +221,7 @@ function CaseStudy() {
           iure.
         </p>
       </section>
-      <section className="col-span-12">
+      <section className="my-image">
         <Image
           src="/portfolio-spoked/spoked-Colour-palette@2x.jpeg"
           alt="Spoked"
@@ -234,7 +231,7 @@ function CaseStudy() {
           priority
         />
       </section>
-      <section className="col-span-12">
+      <section className="my-image">
         <Image
           src="/portfolio-spoked/spoked-typography.jpeg"
           alt="Spoked"
@@ -244,7 +241,7 @@ function CaseStudy() {
           priority
         />
       </section>
-      <section className="col-span-12 md:col-span-8 lg:col-span-10 lg:col-start-3 lg:col-end-9 xl:col-span-8 xl:col-start-3 xl:col-end-9">
+      <section className="my-image">
         <h3>Components</h3>
         <EmbeddedVideoThree />
       </section>
