@@ -51,11 +51,11 @@ ol > li {
 }
 
 .my-grid {
-  @apply col-span-12 md:col-span-10 lg:col-span-8 xl:col-span-8 2xl:col-span-6 md:col-start-2 lg:col-start-3 xl:col-start-3 2xl:col-start-4;
+  @apply col-span-12 md:col-span-10 lg:col-span-8 xl:col-span-8 2xl:col-span-6 md:col-start-2 lg:col-start-3 xl:col-start-3 2xl:col-start-4 my-4;
 }
 
 .my-image {
-  @apply rounded-2xl w-full col-span-12;
+  @apply rounded-2xl w-full col-span-12 my-2;
 }
 
 .video-container {
