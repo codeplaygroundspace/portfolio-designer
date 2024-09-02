@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="mb-24">
+    <header className="my-grid py-8 lg:py-10">
       <Link href="/">
         <Image
           src="/logo.svg"

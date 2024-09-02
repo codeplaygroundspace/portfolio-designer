@@ -44,3 +44,16 @@ h3 {
 h4 {
   @apply text-xl lg:text-xl font-medium mb-2;
 }
+p,
+ul > li,
+ol > li {
+  @apply text-lg;
+}
+
+.my-grid {
+  @apply col-span-12 md:col-span-10 lg:col-span-8 xl:col-span-8 2xl:col-span-6 md:col-start-2 lg:col-start-3 xl:col-start-3 2xl:col-start-4;
+}
+
+.my-image {
+  @apply rounded-2xl w-full;
+}
