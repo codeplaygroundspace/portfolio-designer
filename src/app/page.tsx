@@ -40,7 +40,7 @@ function Intro() {
         Hey, I’m Rosina Pissaco
         <br /> I’m a Product Designer based in Bristol
       </h1>
-      <p className="font-medium pb-12 lg:pb-24 lg:pr-16 xl:pr-40">
+      <p className="font-medium pb-24 lg:pr-16 xl:pr-40">
         Currently, I’m the only Product Designer at NestEgg, a bootstrapped
         startup building a platform that helps Credit Unions and Social Banks
         take better financial decisions. I work across the full end to end
