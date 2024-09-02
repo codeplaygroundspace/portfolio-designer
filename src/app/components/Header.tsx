@@ -7,8 +7,7 @@ export default function Header() {
       <Link href="/">
         <Image
           src="/logo.svg"
-          alt="Logo"
-          className="dark:invert"
+          alt="Rosina Pissaco Logo"
           width={60}
           height={60}
           priority
