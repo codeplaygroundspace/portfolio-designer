@@ -1,6 +1,6 @@
 import Image from "next/image";
-import contributions from "../contributions";
-import teamSpoked from "../teams";
+import { spokedContributions } from "../contributions";
+import { teamSpoked } from "../teams";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -63,16 +63,8 @@ function CaseStudy() {
       <section className="my-grid">
         <h1>Redesigning Spoked </h1>
       </section>
-
       <section className="my-grid">
-        <h2>The Product</h2>
-        <p>
-          Spoked is your AI online cycling coach powered by smart algorithms
-          that helps people get the most out of their cycling.
-        </p>
-      </section>
-      <section className="my-grid">
-        <h3>Overview</h3>
+        <h2>Overview</h2>
         <p>
           Spoked is an innovative cycling coach offering personalised training
           plans. To meet revenue targets, I was tasked with redesigning the
@@ -97,7 +89,7 @@ function CaseStudy() {
         <div>
           <h3>My contribution</h3>
           <div>
-            {contributions.map((contribution, i) => (
+            {spokedContributions.map((contribution, i) => (
               <div key={i} className="my-tag">
                 {contribution}
               </div>

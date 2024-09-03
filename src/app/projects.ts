@@ -1,7 +1,7 @@
 const projects = [
   {
     title: "Testing dashboard powered by AI",
-    page: "/spoked/",
+    page: "/global-app-testing/",
     tags: ["B2C", "B2B", "Software QA"],
     img: "/portfolio-thumbnail/thumbnail-gat.png",
   },
@@ -13,13 +13,13 @@ const projects = [
   },
   {
     title: "Music clips for messages",
-    page: "/spoked/",
+    page: "/song-clip/",
     tags: ["B2C", "Mobile", "Social"],
     img: "/portfolio-thumbnail/thumbnail-songclip.png",
   },
   {
     title: "A Syndicate Lottery App",
-    page: "/spoked/",
+    page: "/hatchster/",
     tags: ["B2C", "Mobile", "Ecommerce"],
     img: "/portfolio-thumbnail/thumbnail-hatchster.png",
   },

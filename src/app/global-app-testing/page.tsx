@@ -1,270 +1,225 @@
 import Image from "next/image";
-import contributions from "../contributions";
-import teamSpoked from "../teams";
+import { songclipContributions } from "../contributions";
+import { teamSongclip } from "../teams";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-export default function GlobalAppTesting() {
+export default function SongClip() {
   return (
     <>
-      <div className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 text-xl leading-relaxed">
-        <Header />
-        <CaseStudy />
-      </div>
-    </>
-  );
-}
-
-function EmbeddedVideoOne() {
-  return (
-    <>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/N7kU7BBNg7c?si=UJgLuqp3PSlrDueB"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </>
-  );
-}
-
-function EmbeddedVideoTwo() {
-  return (
-    <>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/l281eYRTF2Y?si=AkGnQ0INfN29dxjK"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </>
-  );
-}
-
-function EmbeddedVideoThree() {
-  return (
-    <>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/tX0BvokB4Vc?si=U1y2xSffm7vztCCQ"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
+      <Header />
+      <CaseStudy />
+      <Footer />
     </>
   );
 }
 
 function CaseStudy() {
   return (
-    <div>
-      <h1>Redesigning Global App Testing </h1>
-      <div className="flex flex-col gap-12">
-        <section>
-          <h2>The Product</h2>
-          <p>
-            Spoked is your AI online cycling coach powered by smart algorithms
-            that helps people get the most out of their cycling.
-          </p>
-        </section>
-        <section>
-          <h3>Overview</h3>
-          <p>
-            Spoked is an innovative cycling coach offering personalised training
-            plans. To meet revenue targets, I was tasked with redesigning the
-            mobile app to lower the barrier for beginners and increase new user
-            retention. The existing app’s complexity made it difficult for
-            newcomers to engage. After conducting user research, I simplified
-            the content and interface to create a more intuitive experience,
-            making the app accessible for novices while still engaging for
-            advanced cyclists.
-          </p>
-        </section>
-        <section>
-          <h3>The outcome</h3>
-          <ul className="mt-4 list-inside space-y-2">
-            <li>🏆 New users retention increased by 30%</li>
-            <li>🏆 Annual revenue targets achived</li>
-            <li>🏆 Projected revenue increase of 15%</li>
-          </ul>
-        </section>
-
-        <section className="flex flex-col lg:flex-row gap-24">
+    <>
+      <section className="my-grid">
+        <h1>Redesigning Global App Testing</h1>
+      </section>
+      <section className="my-grid">
+        <h2>Overview</h2>
+        <p>
+          Songclip is a SaaS technology platform for integrating licensed music
+          on social and digital platforms. As the solo Product Designer, I was
+          tasked with creating a user-friendly interface for our complex music
+          clip integration system. My initial challenge was to design an
+          intuitive search and integration process for +50 millions of 5-30
+          second music clips. I conducted extensive competitor research to
+          understand how various platforms – from social media to dating apps –
+          could seamlessly incorporate popular music snippets.
+        </p>
+      </section>
+      <section className="my-grid">
+        <h3>The outcome</h3>
+        <ul className="mt-4 list-inside space-y-2">
+          <li>🏆 iOS App got Featured in the App Store</li>
+          <li>🏆 Average clip search and share time reduced by 21%</li>
+          <li>🏆 The 10 Most Innovative Companies in Music 2020</li>
+        </ul>
+      </section>
+      <section className="my-grid flex flex-col lg:flex-row gap-4 lg:gap-8">
+        <div>
+          <h3>My contribution</h3>
           <div>
-            <h3>My contribution</h3>
-            <div>
-              {contributions.map((contribution, i) => (
-                <div
-                  key={i}
-                  className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-1"
-                >
-                  {contribution}
-                </div>
-              ))}
-            </div>
+            {songclipContributions.map((contribution, i) => (
+              <div key={i} className="my-tag">
+                {contribution}
+              </div>
+            ))}
           </div>
+        </div>
+        <div>
+          <h3>The team</h3>
           <div>
-            <h3>The team</h3>
-            <div>
-              {teamSpoked.map((teamMember, i) => (
-                <div
-                  key={i}
-                  className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-1"
-                >
-                  {teamMember}
-                </div>
-              ))}
-            </div>
+            {teamSongclip.map((teamMember, i) => (
+              <div key={i} className="my-tag">
+                {teamMember}
+              </div>
+            ))}
           </div>
-        </section>
-        <section>
-          <Image
-            src="/portfolio-spoked/Spoked-intro-case-study.png"
-            alt="Spoked"
-            className="rounded-md"
-            width={1640}
-            height={400}
-            priority
-          />
-        </section>
+        </div>
+      </section>
+      <section className="my-image">
+        <Image
+          src="/portfolio-songclip/songclip-hero.jpeg"
+          alt="Mongclip (Audiobyte) mobile mockup"
+          className="my-image"
+          width={1640}
+          height={400}
+          priority
+        />
+      </section>
 
-        <section>
-          <h3>Understanding the problem</h3>
-          <p>
-            As this project was directly linked to a key business goal, I needed
-            to fully understand the project purpose and the criteria for success
-            before starting any research or design work. Spoked aimed to
-            increase the percentage of new users and improve retention.
-          </p>
-        </section>
-        <section>
-          <h3>User observation</h3>
-          <p>
-            I conducted a user research session to observe how users interact
-            with the current product and how it fits into their training
-            sessions and daily routines. From this study we discovered the
-            following insights:
-          </p>
-          <ul className="mt-4 list-inside space-y-2">
-            <li>
-              👉 Users wanted personalised training plans based on their
-              individual goals.
-            </li>
-            <li>
-              👉 Users sometimes stopped using the app when injured or on
-              holiday.
-            </li>
-            <li>
-              👉 Different user groups had varied training goals and needs.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <Image
-            src="/portfolio-spoked/spoked-Journey-map@2x.jpeg"
-            alt="Spoked"
-            className="rounded-md"
-            width={1640}
-            height={400}
-            priority
-          />
-        </section>
+      <section className="my-grid">
+        <h3>Understanding the problem</h3>
+        <p>
+          Songclip was seeking to address a significant gap in the digital
+          content market: the lack of accessible, legally compliant tools for
+          integrating short, popular music clips into social media posts,
+          messages, and other digital content. The business goal was clear - to
+          create a solution that would allow platforms to easily incorporate
+          5-30 second meta-tagged music clips, enriching user experiences across
+          various apps and potentially opening new revenue streams. Success
+          would be measured by the seamless integration of our technology into
+          partner platforms and the subsequent increase in user engagement with
+          music-enhanced content.
+        </p>
+      </section>
+      <section className="my-grid">
+        <h3>Competitor research</h3>
+        <p>
+          Integration of music clips into social and messaging platforms is not
+          entirely new, so after understanding the requirements, I began by
+          examining existing solutions. This investigation highlighted several
+          key considerations:
+        </p>
+        <ul className="mt-4 list-inside space-y-2">
+          <li>
+            👉 How do we curate and present music clips to match user
+            preferences?
+          </li>
+          <li>
+            👉 How do we ensure seamless integration across various platforms?
+          </li>
+          <li>
+            👉 What UI elements will feel familiar to users of TikTok,
+            Instagram, and Snapchat?
+          </li>
+        </ul>
+      </section>
+      <section className="my-image">
+        <Image
+          src="/portfolio-spoked/spoked-Journey-map@2x.jpeg"
+          alt="Spoked"
+          className="my-image"
+          width={1640}
+          height={400}
+          priority
+        />
+      </section>
 
-        <section>
-          <h3>Designing the solution</h3>
-          <p>
-            The solution design process for Spoked involved extensive iteration
-            and user testing. I initially created a detailed user journey map to
-            outline key touchpoints and interactions. This was followed by
-            developing prototypes and exploring various approaches to
-            personalising training plans and boosting user engagement. The
-            challenge was to distill complex training data and features into a
-            streamlined, intuitive experience that would be accessible for both
-            beginners and advanced cyclists.
-          </p>
-        </section>
-        <section>
-          <Image
-            src="/portfolio-spoked/spoked-User-flow@2x.jpg"
-            alt="Spoked"
-            className="rounded-md"
-            width={1640}
-            height={400}
-            priority
-          />
-        </section>
-        <section>
-          <Image
-            src="/portfolio-spoked/spoked-Plan-builder@2x.png"
-            alt="Spoked"
-            className="rounded-md mb-12"
-            width={1640}
-            height={400}
-            priority
-          />
-        </section>
-        <section>
-          <h3>Prototype</h3>
-          <EmbeddedVideoOne />
-        </section>
-        <section>
-          <h3>Hi fidelity screens</h3>
-          <EmbeddedVideoTwo />
-        </section>
-        <section>
-          <h3>Design system</h3>
-          <Image
-            src="/portfolio-spoked/spoked-Colour-palette@2x.jpeg"
-            alt="Spoked"
-            className="rounded-md mb-12"
-            width={1640}
-            height={400}
-            priority
-          />
-          <Image
-            src="/portfolio-spoked/spoked-typography.jpeg"
-            alt="Spoked"
-            className="rounded-md mb-12"
-            width={1640}
-            height={400}
-            priority
-          />
-        </section>
-        <section>
-          <h3>Components</h3>
-          <EmbeddedVideoThree />
-        </section>
-        <section>
-          <h3>User feedback</h3>
-          <p>
-            Prototypes were iterated on a number of times after remote user
-            testing sessions. Users were asked to complete a full setup journey,
-            from selecting a training plan to finalising their preferences. We
-            observed their interactions with the AI training plan and followed
-            up to understand their expectations for adjustments based on their
-            input and goals.
-          </p>
-        </section>
-        <section>
-          <h3>The result</h3>
-          <p>
-            The final design transformed how Spoked presents training plans and
-            user interactions. The app now provides a streamlined and intuitive
-            setup journey with clear personalisation options and progress
-            tracking. The design improvements simplified the user experience and
-            addressed the complexity of adjusting training plans.
-          </p>
-          <ul className="mt-4 list-inside space-y-2">
-            <li>🏆 New users retention increased by 30%</li>
-            <li>🏆 Annual revenue targets achived</li>
-            <li>🏆 Projected revenue increase of 15%</li>
-          </ul>
-        </section>
-      </div>
-    </div>
+      <section className="my-grid">
+        <h3>Designing the solution</h3>
+        <p>
+          The solution design process for Spoked involved extensive iteration
+          and user testing. I initially created a detailed user journey map to
+          outline key touchpoints and interactions. This was followed by
+          developing prototypes and exploring various approaches to
+          personalising training plans and boosting user engagement. The
+          challenge was to distill complex training data and features into a
+          streamlined, intuitive experience that would be accessible for both
+          beginners and advanced cyclists.
+        </p>
+      </section>
+      <section className="my-image">
+        <Image
+          src="/portfolio-songclip/songclip-wireframe.jpeg"
+          alt="Songclip wireframe"
+          className="my-image"
+          width={2640}
+          height={400}
+          layout="responsive"
+          priority
+        />
+      </section>
+      <section className="my-image">
+        <Image
+          src="/portfolio-songclip/songclip-hifidelity.jpeg"
+          alt="Songclip Hi-fidelity mockup"
+          className="my-image"
+          width={1640}
+          height={400}
+          priority
+        />
+      </section>
+
+      <section className="my-grid">
+        <h3>Web App design</h3>
+        <p>
+          In order to reach non-iOS users, I also designed a Progressive Web
+          Application suitable for users on desktop and mobile.
+        </p>
+      </section>
+      <section className="my-image">
+        <Image
+          src="/portfolio-songclip/songclip-web.jpeg"
+          alt="Songclip Progressive Web
+          Application mockup"
+          className="my-image"
+          width={1640}
+          height={400}
+          priority
+        />
+      </section>
+      <section className="my-grid">
+        <h3>Third-party integrations</h3>
+        <p>
+          The Songclip API lets other platforms make music part of what’s being
+          created, shared, and send. We worked in collaboration with Viber in
+          order to achieve a great integration between these two products.
+        </p>
+      </section>
+      <section className="my-image">
+        <Image
+          src="/portfolio-songclip/songclip-api.jpeg"
+          alt="Songclip API"
+          className="my-image"
+          width={1640}
+          height={400}
+          priority
+        />
+      </section>
+      <section className="my-grid">
+        <h3>User feedback</h3>
+        <p>
+          Prototypes were iterated on multiple times after remote user testing
+          sessions. Users were asked to complete a full journey, from searching
+          for a music clip to sharing it on social platforms. We observed their
+          interactions with the search, preview, and sharing tools, and followed
+          up to understand their expectations for music integration in their
+          creative workflows.
+        </p>
+      </section>
+      <section className="my-grid">
+        <h3>The result</h3>
+        <p>
+          The final design transformed how Songclip presents and integrates
+          music clips. The app now provides an intuitive search process with
+          clear preview and editing options and seamless sharing capabilities.
+          The design improvements simplified the user experience and addressed
+          the complexities of copyright compliance and cross-platform
+          compatibility.
+        </p>
+        <ul className="mt-4 list-inside space-y-2">
+          <li>🏆 iOS App got Featured in the App Store</li>
+          <li>🏆 Average clip search and share time reduced by 21%</li>
+          <li>🏆 The 10 Most Innovative Companies in Music 2020</li>
+        </ul>
+      </section>
+    </>
   );
 }
