@@ -1,3 +1,5 @@
+export const teamGat = ["3 Designers", "15 Engineers", "3 Project Managers"];
+
 export const teamSpoked = [
   "1 Designer",
   "3 Engineers",

@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { songclipContributions } from "../contributions";
-import { teamSongclip } from "../teams";
+import { gatContributions } from "../contributions";
+import { teamGat } from "../teams";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export default function SongClip() {
+export default function GlobalAppTesting() {
   return (
     <>
       <Header />
@@ -18,7 +18,7 @@ function CaseStudy() {
   return (
     <>
       <section className="my-grid">
-        <h1>Redesigning Global App Testing</h1>
+        <h1>Redesigning an App Testing experience with AI</h1>
       </section>
       <section className="my-grid">
         <h2>Overview</h2>
@@ -45,7 +45,7 @@ function CaseStudy() {
         <div>
           <h3>My contribution</h3>
           <div>
-            {songclipContributions.map((contribution, i) => (
+            {gatContributions.map((contribution, i) => (
               <div key={i} className="my-tag">
                 {contribution}
               </div>
@@ -55,7 +55,7 @@ function CaseStudy() {
         <div>
           <h3>The team</h3>
           <div>
-            {teamSongclip.map((teamMember, i) => (
+            {teamGat.map((teamMember, i) => (
               <div key={i} className="my-tag">
                 {teamMember}
               </div>
@@ -65,8 +65,8 @@ function CaseStudy() {
       </section>
       <section className="my-image">
         <Image
-          src="/portfolio-songclip/songclip-hero.jpeg"
-          alt="Mongclip (Audiobyte) mobile mockup"
+          src="/portfolio-gat/gat-header.jpg"
+          alt="Global App Testing SaSS Dashboard mockup"
           className="my-image"
           width={1640}
           height={400}
@@ -90,7 +90,7 @@ function CaseStudy() {
         </p>
       </section>
       <section className="my-grid">
-        <h3>Competitor research</h3>
+        <h3>User research</h3>
         <p>
           Integration of music clips into social and messaging platforms is not
           entirely new, so after understanding the requirements, I began by
@@ -113,8 +113,18 @@ function CaseStudy() {
       </section>
       <section className="my-image">
         <Image
-          src="/portfolio-spoked/spoked-Journey-map@2x.jpeg"
-          alt="Spoked"
+          src="/portfolio-gat/gat-tickets.png"
+          alt="Global App Testing research"
+          className="my-image"
+          width={1640}
+          height={400}
+          priority
+        />
+      </section>
+      <section className="my-image">
+        <Image
+          src="/portfolio-gat/gat-tickets-2.png"
+          alt="Global App Testing research"
           className="my-image"
           width={1640}
           height={400}
@@ -124,6 +134,11 @@ function CaseStudy() {
 
       <section className="my-grid">
         <h3>Designing the solution</h3>
+        <p>
+          Our solution was to build a platform that stores and track the data
+          that was currently living on spreadsheets and use machine learning and
+          AI to replace most of Test Managers decisions and actions.
+        </p>
         <p>
           The solution design process for Spoked involved extensive iteration
           and user testing. I initially created a detailed user journey map to
@@ -137,19 +152,18 @@ function CaseStudy() {
       </section>
       <section className="my-image">
         <Image
-          src="/portfolio-songclip/songclip-wireframe.jpeg"
-          alt="Songclip wireframe"
+          src="/portfolio-gat/gat-wireframe.png"
+          alt="Global App Testing wireframe"
           className="my-image"
-          width={2640}
+          width={1640}
           height={400}
-          layout="responsive"
           priority
         />
       </section>
       <section className="my-image">
         <Image
-          src="/portfolio-songclip/songclip-hifidelity.jpeg"
-          alt="Songclip Hi-fidelity mockup"
+          src="/portfolio-gat/gat-hi-fidelity.png"
+          alt="Global App Testing Hi-fidelity mockup"
           className="my-image"
           width={1640}
           height={400}
