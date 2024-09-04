@@ -1,4 +1,9 @@
-export const teamGat = ["3 Designers", "15 Engineers", "3 Project Managers"];
+export const teamGat = [
+  "1 Designer",
+  "5 Engineers",
+  "1 Project Managers",
+  "1 Data Scientist",
+];
 
 export const teamSpoked = [
   "1 Designer",

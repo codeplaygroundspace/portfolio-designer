@@ -18,27 +18,24 @@ function CaseStudy() {
   return (
     <>
       <section className="my-grid">
-        <h1>Redesigning an App Testing experience with AI</h1>
+        <h1>Designing an AI Testing platform</h1>
       </section>
       <section className="my-grid">
         <h2>Overview</h2>
         <p>
-          Songclip is a SaaS technology platform for integrating licensed music
-          on social and digital platforms. As the solo Product Designer, I was
-          tasked with creating a user-friendly interface for our complex music
-          clip integration system. My initial challenge was to design an
-          intuitive search and integration process for +50 millions of 5-30
-          second music clips. I conducted extensive competitor research to
-          understand how various platforms – from social media to dating apps –
-          could seamlessly incorporate popular music snippets.
+          In 2024, Global App Testing set out to revolutionise software testing
+          by combining machine learning technology with their powerful global
+          community of testers. The goal was to streamline all testing
+          activities and reduce operational overhead for Test Managers by 50%
+          within one year.
         </p>
       </section>
       <section className="my-grid">
         <h3>The outcome</h3>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 iOS App got Featured in the App Store</li>
-          <li>🏆 Average clip search and share time reduced by 21%</li>
-          <li>🏆 The 10 Most Innovative Companies in Music 2020</li>
+          <li>🏆 Adoption reached 30% in the first 6 months</li>
+          <li>🏆 Operational overhead reduced by 20%</li>
+          <li>🏆 Successfully launched a new AI-driven testing platform</li>
         </ul>
       </section>
       <section className="my-grid flex flex-col lg:flex-row gap-4 lg:gap-8">
@@ -77,37 +74,31 @@ function CaseStudy() {
       <section className="my-grid">
         <h3>Understanding the problem</h3>
         <p>
-          Songclip was seeking to address a significant gap in the digital
-          content market: the lack of accessible, legally compliant tools for
-          integrating short, popular music clips into social media posts,
-          messages, and other digital content. The business goal was clear - to
-          create a solution that would allow platforms to easily incorporate
-          5-30 second meta-tagged music clips, enriching user experiences across
-          various apps and potentially opening new revenue streams. Success
-          would be measured by the seamless integration of our technology into
-          partner platforms and the subsequent increase in user engagement with
-          music-enhanced content.
+          With the need for efficient, global, and accurate software testing
+          becoming more critical than ever, I first developed a strong
+          understanding of the current process through interviews with Test
+          Managers. We discussed the implications of introducing AI and machine
+          learning into their workflow.
         </p>
       </section>
       <section className="my-grid">
         <h3>User research</h3>
         <p>
-          Integration of music clips into social and messaging platforms is not
-          entirely new, so after understanding the requirements, I began by
-          examining existing solutions. This investigation highlighted several
-          key considerations:
+          We conducted user research sessions to observe Test Managers
+          navigating their current processes. From this study we discovered the
+          following insights:
         </p>
         <ul className="mt-4 list-inside space-y-2">
           <li>
-            👉 How do we curate and present music clips to match user
-            preferences?
+            👉 The testing process involved distinct stages: launching tests,
+            moderating results, and delivering outcomes
           </li>
           <li>
-            👉 How do we ensure seamless integration across various platforms?
+            👉 Test Managers were using spreadsheets for all data management
           </li>
           <li>
-            👉 What UI elements will feel familiar to users of TikTok,
-            Instagram, and Snapchat?
+            👉 Each stage involved multiple manual tasks, consuming significant
+            time
           </li>
         </ul>
       </section>
@@ -135,19 +126,11 @@ function CaseStudy() {
       <section className="my-grid">
         <h3>Designing the solution</h3>
         <p>
-          Our solution was to build a platform that stores and track the data
-          that was currently living on spreadsheets and use machine learning and
-          AI to replace most of Test Managers decisions and actions.
-        </p>
-        <p>
-          The solution design process for Spoked involved extensive iteration
-          and user testing. I initially created a detailed user journey map to
-          outline key touchpoints and interactions. This was followed by
-          developing prototypes and exploring various approaches to
-          personalising training plans and boosting user engagement. The
-          challenge was to distill complex training data and features into a
-          streamlined, intuitive experience that would be accessible for both
-          beginners and advanced cyclists.
+          Solution design involved iteration and user testing. High-level logic
+          was mapped out, followed by prototypes. We explored various options,
+          particularly around automating decision-making processes. The
+          challenge was presenting complex testing data in a simple,
+          easy-to-understand way while incorporating AI assistance.
         </p>
       </section>
       <section className="my-image">
@@ -170,68 +153,29 @@ function CaseStudy() {
           priority
         />
       </section>
-
-      <section className="my-grid">
-        <h3>Web App design</h3>
-        <p>
-          In order to reach non-iOS users, I also designed a Progressive Web
-          Application suitable for users on desktop and mobile.
-        </p>
-      </section>
-      <section className="my-image">
-        <Image
-          src="/portfolio-songclip/songclip-web.jpeg"
-          alt="Songclip Progressive Web
-          Application mockup"
-          className="my-image"
-          width={1640}
-          height={400}
-          priority
-        />
-      </section>
-      <section className="my-grid">
-        <h3>Third-party integrations</h3>
-        <p>
-          The Songclip API lets other platforms make music part of what’s being
-          created, shared, and send. We worked in collaboration with Viber in
-          order to achieve a great integration between these two products.
-        </p>
-      </section>
-      <section className="my-image">
-        <Image
-          src="/portfolio-songclip/songclip-api.jpeg"
-          alt="Songclip API"
-          className="my-image"
-          width={1640}
-          height={400}
-          priority
-        />
-      </section>
       <section className="my-grid">
         <h3>User feedback</h3>
         <p>
-          Prototypes were iterated on multiple times after remote user testing
-          sessions. Users were asked to complete a full journey, from searching
-          for a music clip to sharing it on social platforms. We observed their
-          interactions with the search, preview, and sharing tools, and followed
-          up to understand their expectations for music integration in their
-          creative workflows.
+          Prototypes were iterated on after remote user testing sessions. Users
+          were asked to complete a full testing cycle using the new platform. We
+          observed their understanding of the AI-assisted process and followed
+          up to understand how they expected the new system to impact their
+          workflow.
         </p>
       </section>
       <section className="my-grid">
         <h3>The result</h3>
         <p>
-          The final design transformed how Songclip presents and integrates
-          music clips. The app now provides an intuitive search process with
-          clear preview and editing options and seamless sharing capabilities.
-          The design improvements simplified the user experience and addressed
-          the complexities of copyright compliance and cross-platform
-          compatibility.
+          The final design transformed the way Global App Testing manages the
+          testing process. The new platform stores and tracks data previously
+          managed in spreadsheets, using machine learning and AI to automate
+          many of the Test Managers decisions and actions. The testing process
+          was streamlined, with clear explanations of AI-assisted steps.
         </p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 iOS App got Featured in the App Store</li>
-          <li>🏆 Average clip search and share time reduced by 21%</li>
-          <li>🏆 The 10 Most Innovative Companies in Music 2020</li>
+          <li>🏆 Adoption reached 30% in the first 6 months</li>
+          <li>🏆 Operational overhead reduced by 20%</li>
+          <li>🏆 Successfully launched a new AI-driven testing platform</li>
         </ul>
       </section>
     </>
