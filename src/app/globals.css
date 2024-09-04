@@ -3,16 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 89, 89, 89;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 224, 224, 224;
+  --header-color-rgb: 172, 138, 110;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 200, 200, 200;
+    --background-start-rgb: 40, 40, 40;
+    --background-end-rgb: 50, 50, 50;
+    --header-color-rgb: 200, 160, 120;
   }
 }
 
@@ -24,6 +26,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  font-family: var(--font-raleway), sans-serif;
 }
 
 @layer utilities {
@@ -31,18 +34,27 @@ body {
     text-wrap: balance;
   }
 }
-
+/* Rule for all headers */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(var(--header-color-rgb));
+  font-family: var(--font-playfair-display), serif;
+}
 h1 {
   @apply text-5xl md:text-6xl font-medium mb-8;
 }
 h2 {
-  @apply font-medium text-3xl lg:text-4xl mb-4 lg:mb-8;
+  @apply font-medium text-4xl lg:text-5xl mb-4 lg:mb-8;
 }
 h3 {
-  @apply text-2xl lg:text-2xl font-medium mb-2;
+  @apply text-3xl lg:text-3xl font-medium mb-4;
 }
 h4 {
-  @apply text-xl lg:text-xl font-medium mb-2;
+  @apply text-xl lg:text-2xl font-medium mb-2;
 }
 p,
 ul > li,
