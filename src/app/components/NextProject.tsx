@@ -1,0 +1,27 @@
+"use client";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import projects from "../projects";
+
+export default function NextProject() {
+  const pathname = usePathname(); // Get the current path
+  console.log("Current Pathname:", pathname);
+
+  // Find the current project's index
+  const currentIndex = projects.findIndex(
+    (project) => project.page === pathname
+  );
+
+  // Determine the next project, handle wrap-around with modulus operator
+  const nextProject = projects[(currentIndex + 1) % projects.length];
+
+  return (
+    <section className="my-grid">
+      <hr />
+      <Link href={nextProject.page}>
+        <p className="mb-4">Next Project</p>
+        <h2>{nextProject.title}</h2>
+      </Link>
+    </section>
+  );
+}

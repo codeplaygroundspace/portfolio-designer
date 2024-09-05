@@ -3,12 +3,14 @@ import { spokedContributions } from "../contributions";
 import { teamSpoked } from "../teams";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import NextProject from "../components/NextProject";
 
 export default function Spoked() {
   return (
     <>
       <Header />
       <CaseStudy />
+      <NextProject />
       <Footer />
     </>
   );
@@ -176,7 +178,6 @@ function CaseStudy() {
           className="my-image"
           width={2640}
           height={400}
-          layout="responsive"
           priority
         />
       </section>
