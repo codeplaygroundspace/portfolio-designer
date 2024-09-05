@@ -7,18 +7,15 @@ import {
 
 export default function Footer() {
   return (
-    <section className="my-grid pt-8 lg:pt-10 text-center border-t-gray-300 border-solid border-t-2">
+    <section className="my-grid pt-8 lg:pt-10 text-center ">
+      <hr />
       <p className="text-lg font-bold mb-6">
         Thank you for your interest in my work. Let’s connect!
       </p>
       <nav aria-label="Social media links">
         <ul className="flex justify-center space-x-6">
           <li>
-            <a
-              href="mailto:rosieintech@gmails.com"
-              aria-label="Email"
-              className="text-gray-600 hover:text-blue-500 transition-colors duration-300"
-            >
+            <a href="mailto:rosieintech@gmails.com" aria-label="Email">
               <FaRegEnvelope className="size-6" />
             </a>
           </li>
@@ -28,7 +25,6 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-gray-600 hover:text-blue-500 transition-colors duration-300"
             >
               <FaLinkedinIn className="size-6" />
             </a>
@@ -39,7 +35,6 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Dribbble"
-              className="text-gray-600 hover:text-blue-500 transition-colors duration-300"
             >
               <FaDribbble className="size-6" />
             </a>
@@ -50,7 +45,6 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Behance"
-              className="text-gray-600 hover:text-blue-500 transition-colors duration-300"
             >
               <FaBehance className="size-6" />
             </a>

@@ -7,14 +7,16 @@
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 224, 224, 224;
   --header-color-rgb: 172, 138, 110;
+  --link--color-rgb: 54, 139, 130;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 200, 200, 200;
-    --background-start-rgb: 40, 40, 40;
+    --background-start-rgb: 55, 58, 56;
     --background-end-rgb: 50, 50, 50;
     --header-color-rgb: 200, 160, 120;
+    --link--color-rgb: 131, 197, 190;
   }
 }
 
@@ -60,6 +62,16 @@ p,
 ul > li,
 ol > li {
   @apply text-xl leading-relaxed;
+}
+a {
+  @apply text-[rgb(var(--link--color-rgb))] transition-colors duration-500;
+}
+a:hover {
+  color: rgb(var(--foreground-rgb));
+}
+
+hr {
+  @apply mb-10 border-t border-[rgb(var(--foreground-rgb))] opacity-20;
 }
 
 .my-grid {
