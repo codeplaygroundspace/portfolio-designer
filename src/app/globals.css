@@ -22,21 +22,10 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-[rgb(var(--foreground-rgb))] bg-gradient-to-b from-transparent to-[rgb(var(--background-end-rgb))] bg-[rgb(var(--background-start-rgb))];
   font-family: var(--font-raleway), sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-/* Rule for all headers */
 h1,
 h2,
 h3,
@@ -46,26 +35,33 @@ h6 {
   color: rgb(var(--header-color-rgb));
   font-family: var(--font-playfair-display), serif;
 }
+
 h1 {
   @apply text-5xl md:text-6xl font-medium mb-8;
 }
+
 h2 {
   @apply font-medium text-4xl lg:text-5xl mb-4 lg:mb-8;
 }
+
 h3 {
   @apply text-3xl lg:text-3xl font-medium mb-4;
 }
+
 h4 {
   @apply text-xl lg:text-2xl font-medium mb-2;
 }
+
 p,
 ul > li,
 ol > li {
   @apply text-xl leading-relaxed;
 }
+
 a {
   @apply text-[rgb(var(--link--color-rgb))] transition-colors duration-500;
 }
+
 a:hover {
   color: rgb(var(--foreground-rgb));
 }
@@ -97,4 +93,62 @@ hr {
 
 .my-tag {
   @apply inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-2 mb-2;
+}
+
+/* Add the circle animation styles here */
+.oval-highlight-container {
+  position: relative;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.oval-highlight-svg {
+  position: absolute;
+  top: -5px;
+  left: -20px;
+  width: calc(100% + 20px);
+  height: calc(100% + 16px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.oval-animation {
+  stroke: rgb(var(--header-color-rgb));
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.is-visible .oval-animation {
+  animation: subtleWobble 1s ease-in-out infinite;
+  stroke-dashoffset: 0;
+}
+
+@keyframes subtleWobble {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(1px, 0.5px) rotate(0.3deg);
+  }
+  75% {
+    transform: translate(-1px, 0.3px) rotate(-0.3deg);
+  }
+}
+
+@keyframes drawOval {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
