@@ -6,19 +6,20 @@ const projects = [
     img: "/portfolio-thumbnail/thumbnail-gat.png",
   },
   {
-    title: "How I redesigned a Cycling AI app and unlocked £2m in revenue",
+    title:
+      "How I simplified training plans and boosted new user retention by 30%",
     page: "/spoked/",
     tags: ["B2C", "Mobile App", "Fitness & Health"],
     img: "/portfolio-thumbnail/thumbnail-spoked.png",
   },
   {
-    title: "How I increased click through by 50% for roles on the Haystack app",
+    title: "How reduce search time by 50% on Songclip app",
     page: "/song-clip/",
     tags: ["B2C", "Mobile", "Social"],
     img: "/portfolio-thumbnail/thumbnail-songclip.png",
   },
   {
-    title: "How I increased click through by 50% for roles on the Haystack app",
+    title: "How I redesigned Lotto Social and boosted user retention by 30%",
     page: "/hatchster/",
     tags: ["B2C", "Mobile", "Ecommerce"],
     img: "/portfolio-thumbnail/thumbnail-hatchster.png",

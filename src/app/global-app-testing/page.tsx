@@ -2,6 +2,7 @@ import Image from "next/image";
 import { gatContributions } from "../contributions";
 import { teamGat } from "../teams";
 import Header from "../components/Header";
+import NextProject from "../components/NextProject";
 import Footer from "../components/Footer";
 
 export default function GlobalAppTesting() {
@@ -225,15 +226,5 @@ function CaseStudy() {
         </p>
       </section>
     </>
-  );
-}
-
-function NextProject() {
-  return (
-    <section className="my-grid">
-      <h2>Next Project</h2>
-      <h3>Spoked</h3>
-      <p>How I redesigned a Cycling AI app and unlocked £2m in revenue</p>
-    </section>
   );
 }

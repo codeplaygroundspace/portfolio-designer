@@ -3,12 +3,14 @@ import { hatchsterContributions } from "../contributions";
 import { teamHatchster } from "../teams";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import NextProject from "../components/NextProject";
 
 export default function Spoked() {
   return (
     <>
       <Header />
       <CaseStudy />
+      <NextProject />
       <Footer />
     </>
   );

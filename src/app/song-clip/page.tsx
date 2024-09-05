@@ -3,12 +3,14 @@ import { songclipContributions } from "../contributions";
 import { teamSongclip } from "../teams";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import NextProject from "../components/NextProject";
 
 export default function SongClip() {
   return (
     <>
       <Header />
       <CaseStudy />
+      <NextProject />
       <Footer />
     </>
   );
