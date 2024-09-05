@@ -35,8 +35,8 @@ function CaseStudy() {
           </strong>{" "}
           My early assumption was that users would be skeptical about AI taking
           over parts of their job. I conducted extensive user research to figure
-          out how to introduce AI features in a way that would appeal to both
-          the business and the users.
+          out how to introduce AI in a way that would appeal to users and meet
+          the busines goals.
         </p>
       </section>
       <section className="my-grid">
@@ -135,8 +135,8 @@ function CaseStudy() {
       <section className="my-grid">
         <h3>Designing the solution</h3>
         <p>
-          Solution design involved iteration and user testing. High-level logic
-          was mapped out, followed by prototypes.{" "}
+          Solution design involved user testing and multiple iterations.
+          High-level logic was mapped out, followed by prototypes.{" "}
           <strong>
             We explored various options, particularly around automating
             decision-making processes.
@@ -168,7 +168,7 @@ function CaseStudy() {
         <h3>User feedback</h3>
         <p>
           Prototypes were iterated on after remote user testing sessions. Users
-          were asked to complete a full testing cycle using the new platform. We
+          were asked to complete a full testing cycle using the designs. We
           observed their understanding of the AI-assisted process and{" "}
           <strong>
             followed up to understand how they expected the new system to impact
@@ -179,11 +179,14 @@ function CaseStudy() {
       <section className="my-grid">
         <h3>The result</h3>
         <p>
-          The final design transformed the way Global App Testing manages the
-          testing process. The new platform stores and tracks data previously
-          managed in spreadsheets, using machine learning and AI to automate
-          many of the Test Managers decisions and actions. The testing process
-          was streamlined, with clear explanations of AI-assisted steps.
+          The final design transformed the way Global App Testing Managers run
+          the testing process.
+          <strong>
+            {" "}
+            The new platform stores and tracks data previously managed in
+            spreadsheets. It uses machine learning and AI to automate most of
+            the Test Managers decisions and actions.
+          </strong>
         </p>
         <ul className="mt-4 list-inside space-y-2">
           <li>🏆 Successfully launched an MVP in 6 months</li>
@@ -204,7 +207,8 @@ function CaseStudy() {
         </p>
         <ul className="mt-4 list-inside space-y-2">
           <li>
-            👉 What percentage of Test Managers are using the new software?
+            👉 What percentage of Test Managers are currently using the new
+            software?
           </li>
           <li>
             👉 How has the new software impacted the testing delivery time and
