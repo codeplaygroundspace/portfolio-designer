@@ -1,3 +1,4 @@
+import CircleHighlight from "./CircleHighlight";
 import {
   FaRegEnvelope,
   FaLinkedinIn,
@@ -10,7 +11,8 @@ export default function Footer() {
     <section className="my-grid pt-8 lg:pt-10 text-center ">
       <hr />
       <p className="text-lg font-bold mb-6">
-        Thank you for your interest in my work. Let’s connect!
+        Thank you for your interest in my work.{" "}
+        <CircleHighlight>Lets connect!</CircleHighlight>
       </p>
       <nav aria-label="Social media links">
         <ul className="flex justify-center space-x-6">
