@@ -63,27 +63,29 @@ function CaseStudy() {
   return (
     <>
       <section className="my-grid">
-        <h1>Redesigning Spoked </h1>
+        <h1>Redesigning an AI Cycling App </h1>
       </section>
       <section className="my-grid">
         <h2>Overview</h2>
         <p>
-          Spoked is an innovative cycling coach offering personalised training
-          plans. To meet revenue targets, I was tasked with redesigning the
-          mobile app to lower the barrier for beginners and increase new user
-          retention. The existing app’s complexity made it difficult for
-          newcomers to engage. After conducting user research, I simplified the
-          content and interface to create a more intuitive experience, making
-          the app accessible for novices while still engaging for advanced
-          cyclists.
+          Spoked is a smart cycling coach offering personalised training plans.
+          To meet revenue targets, I was tasked with redesigning the mobile app
+          to lower the barrier for beginners and increase new user retention.
+          <strong>
+            The existing app’s complexity made it difficult for newcomers to
+            engage.{" "}
+          </strong>
+          After conducting user research, I simplified the content and interface
+          to create a more intuitive experience, making the app accessible for
+          novices while still engaging for advanced cyclists.
         </p>
       </section>
       <section className="my-grid">
         <h3>The outcome</h3>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 New users retention increased by 30%</li>
-          <li>🏆 Annual revenue targets achived</li>
           <li>🏆 Projected revenue increase of 15%</li>
+          <li>🏆 New users retention increased by 22%</li>
+          <li>🏆 Annual revenue targets achived</li>
         </ul>
       </section>
 
@@ -125,8 +127,11 @@ function CaseStudy() {
         <p>
           As this project was directly linked to a key business goal, I needed
           to fully understand the project purpose and the criteria for success
-          before starting any research or design work. Spoked aimed to increase
-          the percentage of new users and improve retention.
+          before starting any research or design work.{" "}
+          <strong>
+            Spoked aimed to increase the percentage of new users and improve
+            retention.
+          </strong>
         </p>
       </section>
       <section className="my-grid">
@@ -202,10 +207,14 @@ function CaseStudy() {
       <section className="my-grid">
         <h3>Design system</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facere
-          quae est veniam molestiae consequatur tenetur laborum modi, dolorum
-          eius quia sapiente. Porro ad laborum corrupti assumenda, aliquid minus
-          iure.
+          To ensure consistency and scalability across the Spoked app, I design
+          a comprehensive design system. This system includes a carefully
+          curated color palette, typography hierarchy, and a library of reusable
+          components. The color scheme was chosen to reflect Spoked brand
+          identity while ensuring accessibility and readability across various
+          device screens. Typography selections were made to optimize legibility
+          for cyclists who may be viewing the app in various lighting conditions
+          and while in motion.
         </p>
       </section>
       <section className="my-image">
@@ -215,7 +224,6 @@ function CaseStudy() {
           className="my-image"
           width={1640}
           height={400}
-          priority
         />
       </section>
       <section className="my-image">
@@ -225,7 +233,6 @@ function CaseStudy() {
           className="my-image"
           width={1640}
           height={400}
-          priority
         />
       </section>
       <section className="my-image">
@@ -253,9 +260,9 @@ function CaseStudy() {
           addressed the complexity of adjusting training plans.
         </p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 New users retention increased by 30%</li>
-          <li>🏆 Annual revenue targets achived</li>
           <li>🏆 Projected revenue increase of 15%</li>
+          <li>🏆 New users retention increased by 22%</li>
+          <li>🏆 Annual revenue targets achived</li>
         </ul>
       </section>
     </>

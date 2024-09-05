@@ -17,7 +17,6 @@ export default function NextProject() {
 
   return (
     <section className="my-grid">
-      <hr />
       <Link href={nextProject.page}>
         <p className="mb-4">Next Project</p>
         <h2>{nextProject.title}</h2>

@@ -25,14 +25,17 @@ function CaseStudy() {
       <section className="my-grid">
         <h2>Overview</h2>
         <p>
-          Songclip is a SaaS technology platform for integrating licensed music
-          on social and digital platforms. As the solo Product Designer, I was
-          tasked with creating a user-friendly interface for our complex music
-          clip integration system. My initial challenge was to design an
-          intuitive search and integration process for +50 millions of 5-30
-          second music clips. I conducted extensive competitor research to
-          understand how various platforms – from social media to dating apps –
-          could seamlessly incorporate popular music snippets.
+          Songclip is a SaaS platform for integrating licensed music on social
+          and digital platforms. As the solo Product Designer, I was tasked with
+          creating a user-friendly interface for our complex music clip
+          integration system. My initial challenge was to{" "}
+          <strong>
+            design an intuitive search and integration process for +50 millions
+            of 5-30 second music clips.
+          </strong>{" "}
+          I conducted extensive competitor research to understand how various
+          platforms – from social media to dating apps – could seamlessly
+          incorporate popular music snippets.
         </p>
       </section>
       <section className="my-grid">
@@ -85,10 +88,12 @@ function CaseStudy() {
           messages, and other digital content. The business goal was clear - to
           create a solution that would allow platforms to easily incorporate
           5-30 second meta-tagged music clips, enriching user experiences across
-          various apps and potentially opening new revenue streams. Success
-          would be measured by the seamless integration of our technology into
-          partner platforms and the subsequent increase in user engagement with
-          music-enhanced content.
+          various apps and potentially opening new revenue streams.{" "}
+          <strong>
+            Success would be measured by the seamless integration of our
+            technology into partner platforms and the subsequent increase in
+            user engagement with music-enhanced content.
+          </strong>
         </p>
       </section>
       <section className="my-grid">
