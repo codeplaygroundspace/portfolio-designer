@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <section className="my-grid text-center ">
+    <section className="my-grid text-center mt-2">
       <hr />
       <p className="text-lg font-bold mb-6">
         Thank you for your interest in my work.{" "}

@@ -77,8 +77,8 @@ function ProjectsSection() {
 function ProjectCard({ title, page, img, tags }: ProjectProps) {
   return (
     <Link href={page}>
-      <article className="flex gap-6 flex-col sm:flex-row">
-        <div>
+      <article className="flex flex-col sm:flex-row gap-6">
+        <div className="">
           {/* <div className="w-full sm:w-[230px]"> */}
           <Image
             src={img}

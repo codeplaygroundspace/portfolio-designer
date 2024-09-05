@@ -25,26 +25,26 @@ function CaseStudy() {
       <section className="my-grid">
         <h2>Overview</h2>
         <p>
-          Global App Testing helps businesses ensure their software quality
-          through crowdsourced testing. In order to meet revenue targets, the
-          product team was given the challenge of integrating AI and machine
-          learning into the testing processes. After brainstorming, we decided
-          to{" "}
+          Global App Testing (GAT) helps businesses ensure their software
+          quality through crowdsourced testing. In order to meet revenue
+          targets, the product team was given the challenge of integrating AI
+          and machine learning into the testing processes. After brainstorming,
+          we decided to{" "}
           <strong>
             focus on creating an AI-powered platform to assist Test Managers.
           </strong>{" "}
           My early assumption was that users would be skeptical about AI taking
           over parts of their job. I conducted extensive user research to figure
           out how to introduce AI features in a way that would appeal to both
-          our business and our community of testers.
+          the business and the users.
         </p>
       </section>
       <section className="my-grid">
         <h3>The outcome</h3>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 Adoption reached 30% in the first 6 months</li>
+          <li>🏆 Successfully launched an MVP in 6 months</li>
           <li>🏆 Operational overhead reduced by 20%</li>
-          <li>🏆 Successfully launched a new AI-driven testing platform</li>
+          <li>🏆 Adoption reached 35% in the first 6 months</li>
         </ul>
       </section>
       <section className="my-grid flex flex-col lg:flex-row gap-4 lg:gap-8">
@@ -186,9 +186,9 @@ function CaseStudy() {
           was streamlined, with clear explanations of AI-assisted steps.
         </p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 Adoption reached 30% in the first 6 months</li>
+          <li>🏆 Successfully launched an MVP in 6 months</li>
           <li>🏆 Operational overhead reduced by 20%</li>
-          <li>🏆 Successfully launched a new AI-driven testing platform</li>
+          <li>🏆 Adoption reached 35% in the first 6 months</li>
         </ul>
       </section>
       <section className="my-grid">
