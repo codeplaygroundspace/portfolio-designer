@@ -5,7 +5,7 @@ export const gatContributions = [
 ];
 
 export const spokedContributions = [
-  "UX/UI Design",
+  "Sole UX/UI Design",
   "User interview",
   "Prototyping",
 ];
