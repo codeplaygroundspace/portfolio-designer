@@ -4,7 +4,7 @@ import experiences from "./experiences";
 import Link from "next/link";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { FC } from "react";
+import TagList from "./components/TagList";
 
 // Define an interface for the Project props
 interface ProjectProps {
@@ -17,10 +17,6 @@ interface ProjectProps {
 interface ExperienceProps {
   role: string;
   time: string;
-  tags: string[];
-}
-
-interface TagListProps {
   tags: string[];
 }
 
@@ -125,18 +121,6 @@ function ExperienceCard({ role, time, tags }: ExperienceProps) {
         <p className="text-sm">{time}</p>
       </div>
       <TagList tags={tags} />
-    </div>
-  );
-}
-
-function TagList({ tags }: TagListProps) {
-  return (
-    <div>
-      {tags.map((tag, i) => (
-        <div key={i} className="my-tag">
-          {tag}
-        </div>
-      ))}
     </div>
   );
 }
