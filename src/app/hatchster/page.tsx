@@ -71,10 +71,13 @@ function CaseStudy() {
           I led the redesign of Lotto Social lottery platforms, serving nearly
           45 million regular UK players. The project aimed to transform the
           traditional lottery experience into an engaging, entertainment-focused
-          app. Our goal was to increase user retention and boost revenue by
-          reimagining how people interact with lottery games, moving beyond the
-          standard -buy and hope- approach to a more rewarding, gamified
-          experience.
+          app.{" "}
+          <strong>
+            Our goal was to increase user retention and boost revenue by
+            reimagining how people interact with lottery games, moving beyond
+            the standard {`"buy and hope"`} approach to a more rewarding,
+            gamified experience.
+          </strong>
         </p>
       </section>
       <section className="my-grid">
@@ -127,8 +130,12 @@ function CaseStudy() {
           to fully understand the project purpose and the criteria for success
           before starting any research or design work. Lotto Social aimed to
           differentiate itself in a crowded market while increasing user
-          retention and revenue. Users were leaving the platform due to a lack
-          of engagement between draws and disappointment from frequent losses.
+          retention and revenue.
+          <strong>
+            {" "}
+            Users were leaving the platform due to a lack of engagement between
+            draws and disappointment from frequent losses.
+          </strong>{" "}
           Our task was to create a more entertaining experience that kept users
           engaged regardless of winning outcomes, while still maintaining the
           excitement of potential big wins.
@@ -138,8 +145,9 @@ function CaseStudy() {
         <h3>User observation</h3>
         <p>
           I conducted a user research session to observe how users interact with
-          the current product and how it fits into their training sessions and
-          daily routines. From this study we discovered the following insights:
+          lottery products and how these fit into their weekly routines and
+          social activities. From this study we discovered the following
+          insights:
         </p>
         <ul className="mt-4 list-inside space-y-2">
           <li>
@@ -147,37 +155,26 @@ function CaseStudy() {
             lottery draws to maintain interest.
           </li>
           <li>
-            👉 Users sought gamification elements to keep them motivated even
-            when they did not win.
+            👉 There was a strong correlation between instant gratification and
+            user satisfaction
           </li>
         </ul>
       </section>
-      <section className="my-image">
-        <Image
-          src="/portfolio-spoked/spoked-Journey-map@2x.jpeg"
-          alt="Lotto Social App"
-          className="my-image"
-          width={1640}
-          height={400}
-          priority
-        />
-      </section>
-
       <section className="my-grid">
         <h3>Designing the solution</h3>
         <p>
-          The solution design process for Spoked involved extensive iteration
-          and user testing. I initially created a detailed user journey map to
-          outline key touchpoints and interactions. Our goal was to transform
-          the traditional lottery experience into an interactive and
-          entertaining one, ensuring that even when users did not win, they
-          remained engaged and motivated.
+          Solution design involved extensive iteration and user testing. We
+          began by mapping out high-level logic on whiteboards, followed by
+          creating interactive prototypes. Our team explored a wide range of
+          options, particularly focusing on how to display lottery results and
+          syndicate information effectively.
         </p>
       </section>
       <section className="my-image">
+        <h3>Lo-fi wireframes</h3>
         <Image
           src="/portfolio-hatchster/Lotto_Cards_on_home_screen2x.png"
-          alt="Lotto Social App low-fidelity wireframes"
+          alt="Lotto Social App lo-fidelity wireframes"
           className="my-image"
           width={2640}
           height={400}
@@ -186,9 +183,10 @@ function CaseStudy() {
         />
       </section>
       <section className="my-image">
+        <h3>Hi-fi designs</h3>
         <Image
           src="/portfolio-hatchster/Lotto_Cards_on_home_screen2.png"
-          alt="Lotto Social App hi-fidelity mockup"
+          alt="Lotto Social App hi-fidelity designs"
           className="my-image"
           width={1640}
           height={400}
@@ -234,27 +232,33 @@ function CaseStudy() {
       <section className="my-grid">
         <h3>User feedback</h3>
         <p>
-          Prototypes were iterated on a number of times after remote user
-          testing sessions. Users were asked to complete a full setup journey,
-          from selecting a training plan to finalising their preferences. We
-          observed their interactions with the AI training plan and followed up
-          to understand their expectations for adjustments based on their input
-          and goals.
+          Users were asked to complete a full journey, from signing up for a
+          syndicate to checking results and engaging with in-app games.{" "}
+          <strong>
+            {" "}
+            We observed their interactions with the syndicate selection process,
+            result checking interface, and gamification features.{" "}
+          </strong>
+          Follow-up questions helped us understand their expectations for social
+          interactions and reward mechanisms.
         </p>
       </section>
       <section className="my-grid">
         <h3>The result</h3>
         <p>
-          The final design transformed how Spoked presents training plans and
-          user interactions. The app now provides a streamlined and intuitive
-          setup journey with clear personalisation options and progress
-          tracking. The design improvements simplified the user experience and
-          addressed the complexity of adjusting training plans.
+          The final design transformed how Lotto Social presents lottery
+          participation and user engagement. The app now provides a streamlined
+          and intuitive journey from syndicate selection to result checking,
+          with clear social interaction options and gamification elements.The
+          incorporation of daily challenges and social features has created a
+          more engaging and sticky product.
         </p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 New users retention increased by 30%</li>
-          <li>🏆 Annual revenue targets achived</li>
-          <li>🏆 Projected revenue increase of 15%</li>
+          <li>🏆 New user acquisition increased by 15% in the first quarter</li>
+          <li>
+            🏆 User engagement rose by 30%, with average session time doubling
+          </li>
+          <li>🏆 Revenue from in-app purchases grew by 12%</li>
         </ul>
       </section>
     </>
