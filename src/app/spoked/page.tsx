@@ -4,6 +4,7 @@ import { teamSpoked } from "../teams";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NextProject from "../components/NextProject";
+import TagList from "../components/TagList";
 
 export default function Spoked() {
   return (
@@ -92,23 +93,11 @@ function CaseStudy() {
       <section className="my-grid flex flex-col lg:flex-row gap-4 lg:gap-8">
         <div>
           <h3>My contribution</h3>
-          <div>
-            {spokedContributions.map((contribution, i) => (
-              <div key={i} className="my-tag">
-                {contribution}
-              </div>
-            ))}
-          </div>
+          <TagList tags={spokedContributions} />
         </div>
         <div>
           <h3>The team</h3>
-          <div>
-            {teamSpoked.map((teamMember, i) => (
-              <div key={i} className="my-tag">
-                {teamMember}
-              </div>
-            ))}
-          </div>
+          <TagList tags={teamSpoked} />
         </div>
       </section>
       <section className="my-image">

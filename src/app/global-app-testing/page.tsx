@@ -4,6 +4,7 @@ import { teamGat } from "../teams";
 import Header from "../components/Header";
 import NextProject from "../components/NextProject";
 import Footer from "../components/Footer";
+import TagList from "../components/TagList";
 
 export default function GlobalAppTesting() {
   return (
@@ -50,23 +51,11 @@ function CaseStudy() {
       <section className="my-grid flex flex-col lg:flex-row gap-4 lg:gap-8">
         <div>
           <h3>My contribution</h3>
-          <div>
-            {gatContributions.map((contribution, i) => (
-              <div key={i} className="my-tag">
-                {contribution}
-              </div>
-            ))}
-          </div>
+          <TagList tags={gatContributions} />
         </div>
         <div>
           <h3>The team</h3>
-          <div>
-            {teamGat.map((teamMember, i) => (
-              <div key={i} className="my-tag">
-                {teamMember}
-              </div>
-            ))}
-          </div>
+          <TagList tags={teamGat} />
         </div>
       </section>
       <section className="my-image">
