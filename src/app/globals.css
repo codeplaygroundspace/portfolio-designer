@@ -19,7 +19,42 @@
     --link--color-rgb: 131, 197, 190;
   }
 }
+/* Add this to your existing CSS file */
+[data-theme="light"] {
+  --foreground-rgb: 89, 89, 89;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 224, 224, 224;
+  --header-color-rgb: 172, 138, 110;
+  --link--color-rgb: 54, 139, 130;
+}
 
+[data-theme="dark"] {
+  --foreground-rgb: 200, 200, 200;
+  --background-start-rgb: 55, 58, 56;
+  --background-end-rgb: 50, 50, 50;
+  --header-color-rgb: 200, 160, 120;
+  --link--color-rgb: 131, 197, 190;
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-theme="system"] {
+    --foreground-rgb: 200, 200, 200;
+    --background-start-rgb: 55, 58, 56;
+    --background-end-rgb: 50, 50, 50;
+    --header-color-rgb: 200, 160, 120;
+    --link--color-rgb: 131, 197, 190;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  [data-theme="system"] {
+    --foreground-rgb: 89, 89, 89;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 224, 224, 224;
+    --header-color-rgb: 172, 138, 110;
+    --link--color-rgb: 54, 139, 130;
+  }
+}
 body {
   color: rgb(var(--foreground-rgb));
   @apply text-[rgb(var(--foreground-rgb))] bg-gradient-to-b from-transparent to-[rgb(var(--background-end-rgb))] bg-[rgb(var(--background-start-rgb))];

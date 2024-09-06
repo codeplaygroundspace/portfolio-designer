@@ -197,10 +197,6 @@ function CaseStudy() {
         />
       </section>
       <section className="my-image">
-        <h3>Prototype</h3>
-        <EmbeddedVideoOne />
-      </section>
-      <section className="my-image">
         <h3>Hi fidelity screens</h3>
         <EmbeddedVideoTwo />
       </section>
@@ -210,11 +206,9 @@ function CaseStudy() {
           To ensure consistency and scalability across the Spoked app, I design
           a comprehensive design system. This system includes a carefully
           curated color palette, typography hierarchy, and a library of reusable
-          components. The color scheme was chosen to reflect Spoked brand
-          identity while ensuring accessibility and readability across various
-          device screens. Typography selections were made to optimize legibility
-          for cyclists who may be viewing the app in various lighting conditions
-          and while in motion.
+          components. Typography selections were made to optimize legibility for
+          cyclists who may be viewing the app in various lighting conditions and
+          while in motion.
         </p>
       </section>
       <section className="my-image">
@@ -249,6 +243,10 @@ function CaseStudy() {
           to understand their expectations for adjustments based on their input
           and goals.
         </p>
+      </section>
+      <section className="my-image">
+        <h3>Prototype</h3>
+        <EmbeddedVideoOne />
       </section>
       <section className="my-grid">
         <h3>The result</h3>

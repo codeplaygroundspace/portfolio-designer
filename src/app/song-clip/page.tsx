@@ -118,17 +118,6 @@ function CaseStudy() {
           </li>
         </ul>
       </section>
-      <section className="my-image">
-        <Image
-          src="/portfolio-spoked/spoked-Journey-map@2x.jpeg"
-          alt="Spoked"
-          className="my-image"
-          width={1640}
-          height={400}
-          priority
-        />
-      </section>
-
       <section className="my-grid">
         <h3>Designing the solution</h3>
         <p>
@@ -143,6 +132,7 @@ function CaseStudy() {
         </p>
       </section>
       <section className="my-image">
+        <h3>Lo-fi wireframes</h3>
         <Image
           src="/portfolio-songclip/songclip-wireframe.jpeg"
           alt="Songclip wireframe"
@@ -154,16 +144,57 @@ function CaseStudy() {
         />
       </section>
       <section className="my-image">
+        <h3>Hi-fi designs</h3>
         <Image
           src="/portfolio-songclip/songclip-hifidelity.jpeg"
           alt="Songclip Hi-fidelity mockup"
           className="my-image"
           width={1640}
           height={400}
-          priority
         />
       </section>
+      <section className="my-image">
+        <h3>Micro animations</h3>
 
+        <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="aspect-[4/3]">
+            <Image
+              src="/portfolio-songclip/animation-1.gif"
+              alt="Animation1"
+              className="my-image"
+              width={600}
+              height={450}
+            />
+          </div>
+          <div className="aspect-[4/3]">
+            <Image
+              src="/portfolio-songclip/animation-2.gif"
+              alt="Animation 2"
+              className="my-image"
+              width={600}
+              height={450}
+            />
+          </div>
+          <div className="aspect-[4/3]">
+            <Image
+              src="/portfolio-songclip/animation-3.gif"
+              alt="Animation 3"
+              className="my-image"
+              width={600}
+              height={450}
+            />
+          </div>
+          <div className="aspect-[4/3]">
+            <Image
+              src="/portfolio-songclip/animation-4.gif"
+              alt="Animation 4"
+              className="my-image"
+              width={600}
+              height={450}
+            />
+          </div>
+        </div>
+      </section>
       <section className="my-grid">
         <h3>Web App design</h3>
         <p>
