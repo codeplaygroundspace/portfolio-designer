@@ -100,9 +100,9 @@ a {
 hr {
   @apply mb-10 border-t border-[rgb(var(--foreground-rgb))] opacity-20;
 }
-
+/* Custom grid */
 .my-grid {
-  @apply col-span-12 md:col-span-10 lg:col-span-10 xl:col-span-8 2xl:col-span-6 md:col-start-2 lg:col-start-2 xl:col-start-3 2xl:col-start-4 mb-8 mt-6 lg:mb-10;
+  @apply col-span-12 md:col-span-10 lg:col-span-10  2xl:col-span-8 md:col-start-2 lg:col-start-2  2xl:col-start-3 mb-8 mt-6 lg:mb-10;
 }
 
 .my-image {
