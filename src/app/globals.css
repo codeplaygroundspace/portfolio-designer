@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* Original CSS variables */
 :root {
   --foreground-rgb: 89, 89, 89;
   --background-start-rgb: 255, 255, 255;
@@ -13,9 +13,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 200, 200, 200;
-    --background-start-rgb: 55, 58, 56;
-    --background-end-rgb: 50, 50, 50;
-    --header-color-rgb: 200, 160, 120;
+    --background-start-rgb: 39, 39, 54;
+    --background-end-rgb: 25, 22, 32;
+    --header-color-rgb: 213, 226, 255;
     --link--color-rgb: 131, 197, 190;
   }
 }
@@ -30,18 +30,18 @@
 
 [data-theme="dark"] {
   --foreground-rgb: 200, 200, 200;
-  --background-start-rgb: 55, 58, 56;
-  --background-end-rgb: 50, 50, 50;
-  --header-color-rgb: 200, 160, 120;
+  --background-start-rgb: 39, 39, 54;
+  --background-end-rgb: 25, 22, 32;
+  --header-color-rgb: 213, 226, 255;
   --link--color-rgb: 131, 197, 190;
 }
 
 @media (prefers-color-scheme: dark) {
   [data-theme="system"] {
     --foreground-rgb: 200, 200, 200;
-    --background-start-rgb: 55, 58, 56;
-    --background-end-rgb: 50, 50, 50;
-    --header-color-rgb: 200, 160, 120;
+    --background-start-rgb: 39, 39, 54;
+    --background-end-rgb: 25, 22, 32;
+    --header-color-rgb: 213, 226, 255;
     --link--color-rgb: 131, 197, 190;
   }
 }
@@ -94,11 +94,7 @@ ol > li {
 }
 
 a {
-  @apply text-[rgb(var(--link--color-rgb))] transition-colors duration-500;
-}
-
-a:hover {
-  color: rgb(var(--foreground-rgb));
+  @apply transition-colors duration-500;
 }
 
 hr {
@@ -127,7 +123,7 @@ hr {
 }
 
 .my-tag {
-  @apply inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100 mr-2 mb-2;
+  @apply inline-flex items-center rounded p-2 text-sm leading-4 no-underline mr-2 mb-2 bg-[rgb(var(--background-start-rgb))] border-[1px] border-solid border-[rgb(var(--background-end-rgb))];
 }
 
 /* Add the circle animation styles here */

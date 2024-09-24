@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Raleway, Playfair_Display } from "next/font/google";
+import { Raleway, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 
 const raleway = Raleway({
@@ -8,7 +8,7 @@ const raleway = Raleway({
   variable: "--font-raleway",
 });
 
-const playfairDisplay = Playfair_Display({
+const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
   variable: "--font-playfair-display",
 });
@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.variable} ${playfairDisplay.variable} antialiased grid grid-cols-12 sm:gap-4 px-4 lg:px-16 2xl:max-w-fit`}
+        className={`${raleway.variable} ${robotoSlab.variable} antialiased grid grid-cols-12 sm:gap-4 px-4 lg:px-16 2xl:max-w-fit`}
       >
         {children}
       </body>
