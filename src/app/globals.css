@@ -6,7 +6,7 @@
   --foreground-rgb: 89, 89, 89;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 224, 224, 224;
-  --header-color-rgb: 172, 138, 110;
+  --header-color-rgb: 63, 64, 100;
   --link--color-rgb: 54, 139, 130;
 }
 
@@ -24,7 +24,7 @@
   --foreground-rgb: 89, 89, 89;
   --background-start-rgb: 255, 255, 255;
   --background-end-rgb: 224, 224, 224;
-  --header-color-rgb: 172, 138, 110;
+  --header-color-rgb: 63, 64, 100;
   --link--color-rgb: 54, 139, 130;
 }
 
@@ -51,7 +51,7 @@
     --foreground-rgb: 89, 89, 89;
     --background-start-rgb: 255, 255, 255;
     --background-end-rgb: 224, 224, 224;
-    --header-color-rgb: 172, 138, 110;
+    --header-color-rgb: 63, 64, 100;
     --link--color-rgb: 54, 139, 130;
   }
 }
