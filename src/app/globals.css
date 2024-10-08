@@ -68,7 +68,8 @@ h4,
 h5,
 h6 {
   color: rgb(var(--header-color-rgb));
-  font-family: var(--font-playfair-display), serif;
+  font-family: var(--font-headers), serif;
+  font-weight: 700;
 }
 
 h1 {
