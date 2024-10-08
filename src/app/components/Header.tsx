@@ -33,7 +33,7 @@ export default function Header() {
         />
       </Link>
       <div
-        className="flex bg-[rgb(var(--background-end-rgb))] rounded-full p-1"
+        className="flex bg-[rgb(var(--background-secondary))] rounded-full p-1"
         role="radiogroup"
       >
         {[
@@ -46,7 +46,7 @@ export default function Header() {
             aria-checked={theme === name}
             aria-label={`Switch to ${name} theme`}
             className={`p-2 rounded-full transition-colors duration-300 text-[rgb(var(--foreground-rgb))] ${
-              theme === name ? "bg-[rgb(var(--background-start-rgb))]" : ""
+              theme === name ? "bg-[rgb(var(--background))]" : ""
             }`}
             onClick={() => handleThemeChange(name)}
             role="radio"
