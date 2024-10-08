@@ -4,17 +4,17 @@
 /* Original CSS variables */
 :root {
   --foreground-rgb: 89, 89, 89;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 224, 224, 224;
-  --header-color-rgb: 63, 64, 100;
+  --background: 250, 250, 248;
+  --background-secondary: 236, 236, 228;
+  --header-color-rgb: 20, 20, 19;
   --link--color-rgb: 54, 139, 130;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 200, 200, 200;
-    --background-start-rgb: 39, 39, 54;
-    --background-end-rgb: 25, 22, 32;
+    --background: 39, 39, 54;
+    --background-secondary: 25, 22, 32;
     --header-color-rgb: 213, 226, 255;
     --link--color-rgb: 131, 197, 190;
   }
@@ -22,16 +22,16 @@
 /* Add this to your existing CSS file */
 [data-theme="light"] {
   --foreground-rgb: 89, 89, 89;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 224, 224, 224;
-  --header-color-rgb: 63, 64, 100;
+  --background: 250, 250, 248;
+  --background-secondary: 236, 236, 228;
+  --header-color-rgb: 20, 20, 19;
   --link--color-rgb: 54, 139, 130;
 }
 
 [data-theme="dark"] {
   --foreground-rgb: 200, 200, 200;
-  --background-start-rgb: 39, 39, 54;
-  --background-end-rgb: 25, 22, 32;
+  --background: 39, 39, 54;
+  --background-secondary: 25, 22, 32;
   --header-color-rgb: 213, 226, 255;
   --link--color-rgb: 131, 197, 190;
 }
@@ -39,8 +39,8 @@
 @media (prefers-color-scheme: dark) {
   [data-theme="system"] {
     --foreground-rgb: 200, 200, 200;
-    --background-start-rgb: 39, 39, 54;
-    --background-end-rgb: 25, 22, 32;
+    --background: 39, 39, 54;
+    --background-secondary: 25, 22, 32;
     --header-color-rgb: 213, 226, 255;
     --link--color-rgb: 131, 197, 190;
   }
@@ -49,15 +49,15 @@
 @media (prefers-color-scheme: light) {
   [data-theme="system"] {
     --foreground-rgb: 89, 89, 89;
-    --background-start-rgb: 255, 255, 255;
-    --background-end-rgb: 224, 224, 224;
-    --header-color-rgb: 63, 64, 100;
+    --background: 250, 250, 248;
+    --background-secondary: 236, 236, 228;
+    --header-color-rgb: 20, 20, 19;
     --link--color-rgb: 54, 139, 130;
   }
 }
 body {
   color: rgb(var(--foreground-rgb));
-  @apply text-[rgb(var(--foreground-rgb))] bg-gradient-to-b from-transparent to-[rgb(var(--background-end-rgb))] bg-[rgb(var(--background-start-rgb))];
+  @apply text-[rgb(var(--foreground-rgb))] bg-[rgb(var(--background))];
   font-family: var(--font-raleway), sans-serif;
 }
 
