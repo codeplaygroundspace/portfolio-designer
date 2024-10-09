@@ -11,7 +11,7 @@ export default function NextProject() {
   const currentIndex = projects.findIndex(
     (project) => project.page === pathname
   );
-
+  console.log(currentIndex);
   // Determine the next project, handle wrap-around with modulus operator
   const nextProject = projects[(currentIndex + 1) % projects.length];
 
