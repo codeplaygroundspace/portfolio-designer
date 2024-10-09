@@ -153,6 +153,7 @@ function CaseStudy() {
               className="my-image"
               width={600}
               height={450}
+              unoptimized
             />
           </div>
           <div className="aspect-[4/3]">
@@ -162,6 +163,7 @@ function CaseStudy() {
               className="my-image"
               width={600}
               height={450}
+              unoptimized
             />
           </div>
           <div className="aspect-[4/3]">
@@ -171,6 +173,7 @@ function CaseStudy() {
               className="my-image"
               width={600}
               height={450}
+              unoptimized
             />
           </div>
           <div className="aspect-[4/3]">
@@ -180,6 +183,7 @@ function CaseStudy() {
               className="my-image"
               width={600}
               height={450}
+              unoptimized
             />
           </div>
         </div>
