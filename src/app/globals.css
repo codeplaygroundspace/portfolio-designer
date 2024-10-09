@@ -58,7 +58,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   @apply text-[rgb(var(--foreground-rgb))] bg-[rgb(var(--background))];
-  font-family: var(--font-raleway), sans-serif;
+  font-family: var(--font-body), sans-serif;
 }
 
 h1,
@@ -73,25 +73,25 @@ h6 {
 }
 
 h1 {
-  @apply text-5xl md:text-6xl font-medium mb-8;
+  @apply text-4xl md:text-6xl font-medium mb-8;
 }
 
 h2 {
-  @apply font-medium text-4xl lg:text-5xl mb-4 lg:mb-8;
+  @apply font-medium text-3xl lg:text-5xl mb-4 lg:mb-8;
 }
 
 h3 {
-  @apply text-3xl lg:text-3xl font-medium mb-4;
+  @apply text-2xl lg:text-3xl font-medium mb-4;
 }
 
 h4 {
-  @apply text-xl lg:text-2xl font-medium mb-2;
+  @apply text-lg lg:text-2xl font-medium mb-2;
 }
 
 p,
 ul > li,
 ol > li {
-  @apply text-xl leading-relaxed;
+  @apply leading-relaxed text-lg md:text-2xl;
 }
 
 a {
@@ -124,7 +124,7 @@ hr {
 }
 
 .my-tag {
-  @apply inline-flex items-center rounded p-2 text-sm leading-4 no-underline mr-2 mb-2 bg-[rgb(var(--background-start-rgb))] border-[1px] border-solid border-[rgb(var(--background-end-rgb))];
+  @apply inline-flex items-center rounded p-2 leading-4 no-underline mr-2 mb-2 bg-[rgb(var(--background-start-rgb))] border-[1px] border-solid border-[rgb(var(--background-end-rgb))];
 }
 
 /* Add the circle animation styles here */
