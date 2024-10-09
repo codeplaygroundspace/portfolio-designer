@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Raleway, Prompt } from "next/font/google";
+import { Tinos, Prompt } from "next/font/google";
 import "./globals.css";
 
-const raleway = Raleway({
+const tinos = Tinos({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-raleway",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-body",
 });
 
 const prompt = Prompt({
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.variable} ${prompt.variable} antialiased grid grid-cols-12 sm:gap-4 px-4 lg:px-16 2xl:max-w-fit`}
+        className={`${tinos.variable} ${prompt.variable} antialiased grid grid-cols-12 sm:gap-4 px-4 lg:px-16 2xl:max-w-fit`}
       >
         {children}
       </body>

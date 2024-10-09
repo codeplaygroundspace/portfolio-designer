@@ -213,9 +213,9 @@ function CaseStudy() {
           </strong>
         </p>
         <p>
-          It is much easier and natural for me to explain my decision decisions
-          based on user insights. However, it is equally valuable to consider
-          how those decisions also support the business goals.
+          It is much easier and natural for me to explain my decisions based on
+          user insights. However, it is equally valuable to consider how those
+          decisions also support the business goals.
         </p>
       </section>
     </>

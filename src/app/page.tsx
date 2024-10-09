@@ -118,7 +118,7 @@ function ExperienceCard({ role, time, tags }: ExperienceProps) {
     <div className="flex flex-col gap-4">
       <div className="flex flex-col">
         <h4>{role}</h4>
-        <p className="text-sm">{time}</p>
+        <p>{time}</p>
       </div>
       <TagList tags={tags} />
     </div>
