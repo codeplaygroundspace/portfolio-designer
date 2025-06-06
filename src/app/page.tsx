@@ -15,6 +15,7 @@ import ProjectCard from "@/components/ui/ProjectCard";
 import AvailabilityBadge from "@/components/ui/AvailabilityBadge";
 import {
   ArrowUpRight,
+  ArrowDown,
   Mail,
   Linkedin,
   Download,
@@ -37,7 +38,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
-        <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-16 lg:gap-20 py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 py-8 sm:py-12 lg:py-16">
           <ProjectsSection />
           <ExperiencesSection />
         </div>
@@ -84,7 +85,7 @@ function HeroSection() {
               className="inline-flex items-center justify-center gap-2 bg-[rgb(var(--accent))] text-white px-6 py-3 rounded-lg font-medium hover:bg-[rgb(var(--accent))]/90 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
             >
               {heroContent.cta.primary}
-              <ArrowUpRight size={16} />
+              <ArrowDown size={16} />
             </Link>
             <Link
               href="#contact"
@@ -120,49 +121,49 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
-      <div className="max-w-4xl">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 tracking-tight text-balance">
-          {aboutContent.title}
-        </h2>
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
-          <div className="lg:col-span-2 space-y-6 text-[rgb(var(--foreground-secondary))]">
+    <section className="max-w-7xl mx-auto px-4 py-8 sm:py-12 lg:py-16">
+      <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20">
+        <div className="lg:w-2/3">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 tracking-tight text-balance">
+            {aboutContent.title}
+          </h2>
+          <div className="space-y-4 sm:space-y-6 text-[rgb(var(--foreground-secondary))]">
             {aboutContent.paragraphs.map((paragraph, index) => (
               <p key={index} className="text-base sm:text-lg leading-relaxed">
                 {paragraph}
               </p>
             ))}
           </div>
-          <div className="space-y-8">
-            <div>
-              <h3 className="font-semibold mb-4 text-[rgb(var(--header-color-rgb))] text-sm sm:text-base">
-                {aboutContent.skills.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {aboutContent.skills.items.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-2 bg-[rgb(var(--background-secondary))] rounded-full text-xs sm:text-sm font-medium border border-[rgb(var(--border))]"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
+        </div>
+        <div className="lg:flex-1 space-y-6 sm:space-y-8">
+          <div>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-[rgb(var(--header-color-rgb))] text-sm sm:text-base">
+              {aboutContent.skills.title}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {aboutContent.skills.items.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-2 bg-[rgb(var(--background-secondary))] rounded-full text-xs sm:text-sm font-medium border border-[rgb(var(--border))]"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
-            <div>
-              <h3 className="font-semibold mb-4 text-[rgb(var(--header-color-rgb))] text-sm sm:text-base">
-                {aboutContent.tools.title}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {aboutContent.tools.items.map((tool) => (
-                  <span
-                    key={tool}
-                    className="px-3 py-2 bg-[rgb(var(--background-secondary))] rounded-full text-xs sm:text-sm font-medium border border-[rgb(var(--border))]"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
+          </div>
+          <div>
+            <h3 className="font-semibold mb-3 sm:mb-4 text-[rgb(var(--header-color-rgb))] text-sm sm:text-base">
+              {aboutContent.tools.title}
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {aboutContent.tools.items.map((tool) => (
+                <span
+                  key={tool}
+                  className="px-3 py-2 bg-[rgb(var(--background-secondary))] rounded-full text-xs sm:text-sm font-medium border border-[rgb(var(--border))]"
+                >
+                  {tool}
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -180,15 +181,15 @@ function ProjectsSection() {
 
   return (
     <section className="lg:w-2/3" id="projects">
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 mb-6 sm:mb-8">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-balance">
           {projectsContent.title}
         </h2>
-        <span className="text-sm font-medium text-[rgb(var(--foreground-secondary))]">
+        <span className="text-sm font-medium text-[rgb(var(--foreground-secondary))] shrink-0">
           {projectsWithDescriptions.length} {projectsContent.subtitle}
         </span>
       </div>
-      <div className="grid gap-8 lg:gap-12">
+      <div className="grid gap-6 sm:gap-8 lg:gap-12">
         {projectsWithDescriptions.map((project, index) => (
           <ProjectCard
             key={project.title}
@@ -216,10 +217,10 @@ function ExperiencesSection() {
 
   return (
     <aside className="lg:flex-1">
-      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-8 tracking-tight">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 tracking-tight">
         Experience
       </h2>
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {experiencesWithCompanies.map((ex, index) => (
           <ExperienceCard
             key={ex.role}
@@ -244,26 +245,30 @@ function ExperienceCard({
   isLatest,
 }: ExperienceProps & { isLatest?: boolean }) {
   return (
-    <div className="relative p-4 rounded-lg border border-[rgb(var(--border))] bg-[rgb(var(--background-secondary))]/30">
+    <div className="relative w-full p-4 sm:p-5 rounded-lg border border-[rgb(var(--border))] bg-[rgb(var(--background-secondary))]/30">
       {isLatest && (
         <div className="absolute -top-2 -right-2 bg-[rgb(var(--accent))] text-white text-xs px-2 py-1 rounded-full">
           Current
         </div>
       )}
-      <div className="flex flex-col gap-3">
-        <div>
-          <h4 className="font-semibold text-base sm:text-lg">{role}</h4>
+      <div className="flex flex-col gap-3 sm:gap-4">
+        <div className="min-h-[80px] sm:min-h-[90px] flex flex-col justify-start">
+          <h4 className="font-semibold text-base sm:text-lg leading-tight mb-1">
+            {role}
+          </h4>
           {company && (
-            <p className="text-[rgb(var(--accent))] font-medium text-sm sm:text-base">
+            <p className="text-[rgb(var(--accent))] font-medium text-sm sm:text-base mb-2">
               {company}
             </p>
           )}
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-[rgb(var(--foreground-secondary))] mt-1">
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-[rgb(var(--foreground-secondary))] mt-auto">
             <Calendar size={14} />
             <span>{time}</span>
           </div>
         </div>
-        <TagList tags={tags} />
+        <div className="mt-auto">
+          <TagList tags={tags} />
+        </div>
       </div>
     </div>
   );
@@ -308,14 +313,14 @@ function ResumeDownloadLink() {
       href={resumeContent.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 p-4 rounded-lg border border-[rgb(var(--border))] hover:bg-[rgb(var(--background-secondary))] transition-colors duration-200 group"
+      className="w-full inline-flex items-center gap-2 p-4 sm:p-5 rounded-lg border border-[rgb(var(--border))] hover:bg-[rgb(var(--background-secondary))] transition-colors duration-200 group"
       aria-label="Download Resume"
     >
-      <Download size={16} className="text-[rgb(var(--accent))]" />
-      <span className="font-medium">{resumeContent.text}</span>
+      <Download size={16} className="text-[rgb(var(--accent))] shrink-0" />
+      <span className="font-medium flex-1">{resumeContent.text}</span>
       <ArrowUpRight
         size={14}
-        className="text-[rgb(var(--foreground-secondary))] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200"
+        className="text-[rgb(var(--foreground-secondary))] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200 shrink-0"
       />
     </a>
   );

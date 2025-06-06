@@ -148,7 +148,7 @@ hr {
 }
 
 .my-tag {
-  @apply inline-flex items-center rounded p-2 leading-4 no-underline mr-2 mb-2 bg-[rgb(var(--background-start-rgb))] border-[1px] border-solid border-[rgb(var(--background-end-rgb))];
+  @apply inline-flex items-center rounded p-2 leading-4 no-underline mr-2 mb-2 bg-[rgb(var(--background-start-rgb))] border-[1px] border-solid border-[rgb(var(--background-end-rgb))] text-xs font-medium;
 }
 
 /* Add the circle animation styles here */
