@@ -57,7 +57,7 @@ export default function ProjectCard({
           <div className="flex items-center justify-between mt-auto">
             <TagList tags={tags} />
             {impact && (
-              <span className="text-sm font-sm text-[rgb(var(--accent))] bg-[rgb(var(--accent))]/10 px-2 py-1 rounded">
+              <span className="text-xs font-medium text-[rgb(var(--accent))] bg-[rgb(var(--accent))]/10 px-2 py-1 rounded">
                 {impact}
               </span>
             )}
