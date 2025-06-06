@@ -1,10 +1,35 @@
 import Image from "next/image";
-import { songclipContributions } from "../contributions";
-import { teamSongclip } from "../teams";
+import { songclipContributions } from "@/data/contributions";
+import { teamSongclip } from "@/data/teams";
+import { songclipCaseStudy } from "@/data/songclipCaseStudy";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import NextProject from "@/components/sections/NextProject";
 import TagList from "@/components/ui/TagList";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Music App Optimization - Songclip Case Study",
+  description:
+    "How I optimized a music app to reduce search time by 21% and got featured in the App Store. Music platform UX design case study by Rosina Pissaco.",
+  keywords: [
+    "music app design",
+    "audio platform UX",
+    "social media integration",
+    "mobile app optimization",
+    "music streaming design",
+    "app store featured",
+    "product designer",
+    "B2C mobile design",
+    "Bristol UX designer",
+  ],
+  openGraph: {
+    title: "Music App Optimization - Songclip Case Study",
+    description:
+      "How I optimized a music app to reduce search time by 21% and got featured in the App Store.",
+    type: "article",
+  },
+};
 
 export default function SongClip() {
   return (
@@ -21,30 +46,18 @@ function CaseStudy() {
   return (
     <>
       <section className="my-grid">
-        <h1>Redesigning Songclip</h1>
+        <h1>{songclipCaseStudy.title}</h1>
       </section>
       <section className="my-grid">
         <h2>Overview</h2>
-        <p>
-          Songclip is a SaaS platform for integrating licensed music on social
-          and digital platforms. As the solo Product Designer, I was tasked with
-          creating a user-friendly interface for our complex music clip
-          integration system. My initial challenge was to{" "}
-          <strong>
-            design an intuitive search and integration process for +50 millions
-            of 5-30 second music clips.
-          </strong>{" "}
-          I conducted extensive competitor research to understand how various
-          platforms – from social media to dating apps – could seamlessly
-          incorporate popular music snippets.
-        </p>
+        <p>{songclipCaseStudy.overview}</p>
       </section>
       <section className="my-grid">
         <h3>The outcome</h3>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 iOS App got Featured in the App Store</li>
-          <li>🏆 Average clip search and share time reduced by 21%</li>
-          <li>🏆 The 10 Most Innovative Companies in Music 2020</li>
+          {songclipCaseStudy.outcomes.map((outcome, index) => (
+            <li key={index}>{outcome}</li>
+          ))}
         </ul>
       </section>
       <section className="my-grid flex flex-col lg:flex-row gap-4 lg:gap-8">
@@ -70,55 +83,22 @@ function CaseStudy() {
 
       <section className="my-grid">
         <h3>Understanding the problem</h3>
-        <p>
-          Songclip was seeking to address a significant gap in the digital
-          content market: the lack of accessible, legally compliant tools for
-          integrating short, popular music clips into social media posts,
-          messages, and other digital content. The business goal was clear - to
-          create a solution that would allow platforms to easily incorporate
-          5-30 second meta-tagged music clips, enriching user experiences across
-          various apps and potentially opening new revenue streams.{" "}
-          <strong>
-            Success would be measured by the seamless integration of our
-            technology into partner platforms and the subsequent increase in
-            user engagement with music-enhanced content.
-          </strong>
-        </p>
+        <p>{songclipCaseStudy.problemStatement}</p>
       </section>
       <section className="my-grid">
         <h3>Competitor research</h3>
-        <p>
-          Integration of music clips into social and messaging platforms is not
-          entirely new, so after understanding the requirements, I began by
-          examining existing solutions. This investigation highlighted several
-          key considerations:
-        </p>
+        <p>{songclipCaseStudy.competitorResearch.description}</p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>
-            👉 How do we curate and present music clips to match user
-            preferences?
-          </li>
-          <li>
-            👉 How do we ensure seamless integration across various platforms?
-          </li>
-          <li>
-            👉 What UI elements will feel familiar to users of TikTok,
-            Instagram, and Snapchat?
-          </li>
+          {songclipCaseStudy.competitorResearch.considerations.map(
+            (consideration, index) => (
+              <li key={index}>{consideration}</li>
+            )
+          )}
         </ul>
       </section>
       <section className="my-grid">
         <h3>Designing the solution</h3>
-        <p>
-          The solution design process for Spoked involved extensive iteration
-          and user testing. I initially created a detailed user journey map to
-          outline key touchpoints and interactions. This was followed by
-          developing prototypes and exploring various approaches to
-          personalising training plans and boosting user engagement. The
-          challenge was to distill complex training data and features into a
-          streamlined, intuitive experience that would be accessible for both
-          beginners and advanced cyclists.
-        </p>
+        <p>{songclipCaseStudy.designSolution}</p>
       </section>
       <section className="my-image">
         <h3>Lo-fi wireframes</h3>
@@ -128,7 +108,7 @@ function CaseStudy() {
           className="my-image"
           width={2640}
           height={400}
-          layout="responsive"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
           priority
         />
       </section>
@@ -190,10 +170,7 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>Web App design</h3>
-        <p>
-          In order to reach non-iOS users, I also designed a Progressive Web
-          Application suitable for users on desktop and mobile.
-        </p>
+        <p>{songclipCaseStudy.webAppDesign}</p>
       </section>
       <section className="my-image">
         <Image
@@ -208,11 +185,7 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>Third-party integrations</h3>
-        <p>
-          The Songclip API lets other platforms make music part of what’s being
-          created, shared, and send. We worked in collaboration with Viber in
-          order to achieve a great integration between these two products.
-        </p>
+        <p>{songclipCaseStudy.thirdPartyIntegrations}</p>
       </section>
       <section className="my-image">
         <Image
@@ -226,29 +199,15 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>User feedback</h3>
-        <p>
-          Prototypes were iterated on multiple times after remote user testing
-          sessions. Users were asked to complete a full journey, from searching
-          for a music clip to sharing it on social platforms. We observed their
-          interactions with the search, preview, and sharing tools, and followed
-          up to understand their expectations for music integration in their
-          creative workflows.
-        </p>
+        <p>{songclipCaseStudy.userFeedback}</p>
       </section>
       <section className="my-grid">
         <h3>The result</h3>
-        <p>
-          The final design transformed how Songclip presents and integrates
-          music clips. The app now provides an intuitive search process with
-          clear preview and editing options and seamless sharing capabilities.
-          The design improvements simplified the user experience and addressed
-          the complexities of copyright compliance and cross-platform
-          compatibility.
-        </p>
+        <p>{songclipCaseStudy.result.description}</p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 iOS App got Featured in the App Store</li>
-          <li>🏆 Average clip search and share time reduced by 21%</li>
-          <li>🏆 The 10 Most Innovative Companies in Music 2020</li>
+          {songclipCaseStudy.result.achievements.map((achievement, index) => (
+            <li key={index}>{achievement}</li>
+          ))}
         </ul>
       </section>
     </>

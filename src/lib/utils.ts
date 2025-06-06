@@ -44,3 +44,39 @@ export function slugify(str: string): string {
     .replace(/[\s_-]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+
+/**
+ * Truncate text to specified length
+ */
+export function truncate(text: string, length: number): string {
+  if (text.length <= length) return text;
+  return text.slice(0, length).trim() + "...";
+}
+
+/**
+ * Capitalize first letter of each word
+ */
+export function titleCase(str: string): string {
+  return str.replace(
+    /\w\S*/g,
+    (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+  );
+}
+
+/**
+ * Check if we're in browser environment
+ */
+export function isBrowser(): boolean {
+  return typeof window !== "undefined";
+}
+
+/**
+ * Safely parse JSON with fallback
+ */
+export function safeJsonParse<T>(str: string, fallback: T): T {
+  try {
+    return JSON.parse(str);
+  } catch {
+    return fallback;
+  }
+}

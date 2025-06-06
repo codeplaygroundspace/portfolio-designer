@@ -1,7 +1,10 @@
 {
-  "name": "ddd",
-  "version": "0.1.0",
+  "name": "rosina-pissaco-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "description": "Portfolio website for Rosina Pissaco - Senior Product Designer",
+  "author": "Rosina Pissaco",
+  "homepage": "https://rosinapissaco.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +13,8 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.8",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "next": "^15.3.3",
     "react": "^19.1.0",
