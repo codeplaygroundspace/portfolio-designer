@@ -1,10 +1,10 @@
-import Image from "next/image";
-import projects from "./projects";
-import experiences from "./experiences";
+import projects from "@/data/projects";
+import experiences from "@/data/experiences";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TagList from "@/components/ui/TagList";
+import OptimizedImage from "@/components/ui/OptimizedImage";
 
 // Define an interface for the Project props
 interface ProjectProps {
@@ -75,14 +75,13 @@ function ProjectCard({ title, page, img, tags }: ProjectProps) {
     <Link href={page}>
       <article className="flex flex-col sm:flex-row gap-6">
         <div className="">
-          {/* <div className="w-full sm:w-[230px]"> */}
-          <Image
+          <OptimizedImage
             src={img}
             alt={title}
             className="rounded-lg"
             width={500}
             height={500}
-            priority
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
           />
         </div>
         <div className="flex flex-col gap-1 lg:gap-2">

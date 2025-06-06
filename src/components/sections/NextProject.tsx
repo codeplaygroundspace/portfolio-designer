@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import projects from "@/app/projects";
+import projects from "@/data/projects";
 import type { NavigationProject } from "@/types";
 
 export default function NextProject() {

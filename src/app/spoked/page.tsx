@@ -1,10 +1,35 @@
 import Image from "next/image";
-import { spokedContributions } from "../contributions";
-import { teamSpoked } from "../teams";
+import { spokedContributions } from "@/data/contributions";
+import { teamSpoked } from "@/data/teams";
+import { spokedCaseStudy } from "@/data/spokedCaseStudy";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import NextProject from "@/components/sections/NextProject";
 import TagList from "@/components/ui/TagList";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cycling App Redesign - Spoked AI Coach Case Study",
+  description:
+    "How I redesigned a cycling app to boost new user retention by 22% and increase revenue by 15%. Mobile app UX design case study by Rosina Pissaco.",
+  keywords: [
+    "mobile app design",
+    "cycling app UX",
+    "fitness app design",
+    "AI coach interface",
+    "user retention design",
+    "mobile UX designer",
+    "app redesign",
+    "product designer Bristol",
+    "B2C app design",
+  ],
+  openGraph: {
+    title: "Cycling App Redesign - Spoked AI Coach Case Study",
+    description:
+      "How I redesigned a cycling app to boost new user retention by 22%. Mobile app design case study.",
+    type: "article",
+  },
+};
 
 export default function Spoked() {
   return (
@@ -64,29 +89,18 @@ function CaseStudy() {
   return (
     <>
       <section className="my-grid">
-        <h1>Redesigning an AI Cycling App </h1>
+        <h1>{spokedCaseStudy.title}</h1>
       </section>
       <section className="my-grid">
         <h2>Overview</h2>
-        <p>
-          Spoked is a smart cycling coach offering personalised training plans.
-          To meet revenue targets, I was tasked with redesigning the mobile app
-          to lower the barrier for beginners and increase new user retention.
-          <strong>
-            The existing app’s complexity made it difficult for newcomers to
-            engage.{" "}
-          </strong>
-          After conducting user research, I simplified the content and interface
-          to create a more intuitive experience, making the app accessible for
-          novices while still engaging for advanced cyclists.
-        </p>
+        <p>{spokedCaseStudy.overview}</p>
       </section>
       <section className="my-grid">
         <h3>The outcome</h3>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 Projected revenue increase of 15%</li>
-          <li>🏆 New users retention increased by 22%</li>
-          <li>🏆 Annual revenue targets achived</li>
+          {spokedCaseStudy.outcomes.map((outcome, index) => (
+            <li key={index}>{outcome}</li>
+          ))}
         </ul>
       </section>
 
@@ -113,32 +127,15 @@ function CaseStudy() {
 
       <section className="my-grid">
         <h3>Understanding the problem</h3>
-        <p>
-          As this project was directly linked to a key business goal, I needed
-          to fully understand the project purpose and the criteria for success
-          before starting any research or design work.{" "}
-          <strong>
-            Spoked aimed to increase the percentage of new users and improve
-            retention.
-          </strong>
-        </p>
+        <p>{spokedCaseStudy.problemStatement}</p>
       </section>
       <section className="my-grid">
         <h3>User observation</h3>
-        <p>
-          I conducted a user research session to observe how users interact with
-          the current product and how it fits into their training sessions and
-          daily routines. From this study we discovered the following insights:
-        </p>
+        <p>{spokedCaseStudy.userObservation.description}</p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>
-            👉 Users wanted personalised training plans based on their
-            individual goals.
-          </li>
-          <li>
-            👉 Users sometimes stopped using the app when injured or on holiday.
-          </li>
-          <li>👉 Different user groups had varied training goals and needs.</li>
+          {spokedCaseStudy.userObservation.insights.map((insight, index) => (
+            <li key={index}>{insight}</li>
+          ))}
         </ul>
       </section>
       <section className="my-image">
@@ -154,16 +151,7 @@ function CaseStudy() {
 
       <section className="my-grid">
         <h3>Designing the solution</h3>
-        <p>
-          The solution design process for Spoked involved extensive iteration
-          and user testing. I initially created a detailed user journey map to
-          outline key touchpoints and interactions. This was followed by
-          developing prototypes and exploring various approaches to
-          personalising training plans and boosting user engagement. The
-          challenge was to distill complex training data and features into a
-          streamlined, intuitive experience that would be accessible for both
-          beginners and advanced cyclists.
-        </p>
+        <p>{spokedCaseStudy.designSolution}</p>
       </section>
       <section className="my-image">
         <Image
@@ -191,14 +179,7 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>Design system</h3>
-        <p>
-          To ensure consistency and scalability across the Spoked app, I design
-          a comprehensive design system. This system includes a carefully
-          curated color palette, typography hierarchy, and a library of reusable
-          components. Typography selections were made to optimize legibility for
-          cyclists who may be viewing the app in various lighting conditions and
-          while in motion.
-        </p>
+        <p>{spokedCaseStudy.designSystem}</p>
       </section>
       <section className="my-image">
         <Image
@@ -224,14 +205,7 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>User feedback</h3>
-        <p>
-          Prototypes were iterated on a number of times after remote user
-          testing sessions. Users were asked to complete a full setup journey,
-          from selecting a training plan to finalising their preferences. We
-          observed their interactions with the AI training plan and followed up
-          to understand their expectations for adjustments based on their input
-          and goals.
-        </p>
+        <p>{spokedCaseStudy.userFeedback}</p>
       </section>
       <section className="my-image">
         <h3>Prototype</h3>
@@ -239,17 +213,11 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>The result</h3>
-        <p>
-          The final design transformed how Spoked presents training plans and
-          user interactions. The app now provides a streamlined and intuitive
-          setup journey with clear personalisation options and progress
-          tracking. The design improvements simplified the user experience and
-          addressed the complexity of adjusting training plans.
-        </p>
+        <p>{spokedCaseStudy.result.description}</p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 Projected revenue increase of 15%</li>
-          <li>🏆 New users retention increased by 22%</li>
-          <li>🏆 Annual revenue targets achived</li>
+          {spokedCaseStudy.result.achievements.map((achievement, index) => (
+            <li key={index}>{achievement}</li>
+          ))}
         </ul>
       </section>
     </>

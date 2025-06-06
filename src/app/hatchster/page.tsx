@@ -1,10 +1,35 @@
 import Image from "next/image";
-import { hatchsterContributions } from "../contributions";
-import { teamHatchster } from "../teams";
+import { hatchsterContributions } from "@/data/contributions";
+import { teamHatchster } from "@/data/teams";
+import { hatchsterCaseStudy } from "@/data/hatchsterCaseStudy";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import NextProject from "@/components/sections/NextProject";
 import TagList from "@/components/ui/TagList";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Lottery App Redesign - Hatchster Case Study",
+  description:
+    "How I redesigned Lotto Social app to boost user retention by 30%. Gambling app UX design and gamification case study by Rosina Pissaco.",
+  keywords: [
+    "lottery app design",
+    "gambling app UX",
+    "gamification design",
+    "social gaming app",
+    "user retention design",
+    "mobile gambling design",
+    "ecommerce app design",
+    "product designer",
+    "Bristol UX designer",
+  ],
+  openGraph: {
+    title: "Lottery App Redesign - Hatchster Case Study",
+    description:
+      "How I redesigned Lotto Social app to boost user retention by 30%. Gambling app UX design case study.",
+    type: "article",
+  },
+};
 
 export default function Spoked() {
   return (
@@ -64,31 +89,18 @@ function CaseStudy() {
   return (
     <>
       <section className="my-grid">
-        <h1>Redesigning Lotto Social </h1>
+        <h1>{hatchsterCaseStudy.title}</h1>
       </section>
       <section className="my-grid">
         <h2>Overview</h2>
-        <p>
-          I led the redesign of Lotto Social lottery platforms, serving nearly
-          45 million regular UK players. The project aimed to transform the
-          traditional lottery experience into an engaging, entertainment-focused
-          app.{" "}
-          <strong>
-            Our goal was to increase user retention and boost revenue by
-            reimagining how people interact with lottery games, moving beyond
-            the standard {`"buy and hope"`} approach to a more rewarding,
-            gamified experience.
-          </strong>
-        </p>
+        <p>{hatchsterCaseStudy.overview}</p>
       </section>
       <section className="my-grid">
         <h3>The outcome</h3>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 New user acquisition increased by 15% in the first quarter</li>
-          <li>
-            🏆 User engagement rose by 30%, with average session time doubling
-          </li>
-          <li>🏆 Revenue from in-app purchases grew by 25% year-over-year</li>
+          {hatchsterCaseStudy.outcomes.map((outcome, index) => (
+            <li key={index}>{outcome}</li>
+          ))}
         </ul>
       </section>
 
@@ -114,50 +126,20 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>Understanding the problem</h3>
-        <p>
-          As this project was directly linked to a key business goal, I needed
-          to fully understand the project purpose and the criteria for success
-          before starting any research or design work. Lotto Social aimed to
-          differentiate itself in a crowded market while increasing user
-          retention and revenue.
-          <strong>
-            {" "}
-            Users were leaving the platform due to a lack of engagement between
-            draws and disappointment from frequent losses.
-          </strong>{" "}
-          Our task was to create a more entertaining experience that kept users
-          engaged regardless of winning outcomes, while still maintaining the
-          excitement of potential big wins.
-        </p>
+        <p>{hatchsterCaseStudy.problemStatement}</p>
       </section>
       <section className="my-grid">
         <h3>User observation</h3>
-        <p>
-          I conducted a user research session to observe how users interact with
-          lottery products and how these fit into their weekly routines and
-          social activities. From this study we discovered the following
-          insights:
-        </p>
+        <p>{hatchsterCaseStudy.userObservation.description}</p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>
-            👉 Users needed more frequent engagement opportunities beyond the
-            lottery draws to maintain interest.
-          </li>
-          <li>
-            👉 There was a strong correlation between instant gratification and
-            user satisfaction
-          </li>
+          {hatchsterCaseStudy.userObservation.insights.map((insight, index) => (
+            <li key={index}>{insight}</li>
+          ))}
         </ul>
       </section>
       <section className="my-grid">
         <h3>Designing the solution</h3>
-        <p>
-          Solution design involved extensive iteration and user testing. We
-          began by mapping out high-level logic on whiteboards, followed by
-          creating interactive prototypes. Our team explored a wide range of
-          options, particularly focusing on how to display lottery results and
-          syndicate information effectively.
-        </p>
+        <p>{hatchsterCaseStudy.designSolution}</p>
       </section>
       <section className="my-image">
         <h3>Lo-fi wireframes</h3>
@@ -167,7 +149,7 @@ function CaseStudy() {
           className="my-image"
           width={2640}
           height={400}
-          layout="responsive"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
           priority
         />
       </section>
@@ -184,11 +166,7 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>Design system</h3>
-        <p>
-          I decided to work with Brad Frost solution: Atomic Design. This
-          approach divides design components into 5 different categories: atoms,
-          molecules, organisms, templates, and pages.
-        </p>
+        <p>{hatchsterCaseStudy.designSystem}</p>
       </section>
       <section className="my-image">
         <Image
@@ -202,11 +180,7 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>Brand</h3>
-        <p>
-          I decided to work with Brad Frost solution: Atomic Design. This
-          approach divides design components into 5 different categories: atoms,
-          molecules, organisms, templates, and pages.
-        </p>
+        <p>{hatchsterCaseStudy.brand}</p>
       </section>
       <section className="my-image">
         <Image
@@ -220,34 +194,15 @@ function CaseStudy() {
       </section>
       <section className="my-grid">
         <h3>User feedback</h3>
-        <p>
-          Users were asked to complete a full journey, from signing up for a
-          syndicate to checking results and engaging with in-app games.{" "}
-          <strong>
-            {" "}
-            We observed their interactions with the syndicate selection process,
-            result checking interface, and gamification features.{" "}
-          </strong>
-          Follow-up questions helped us understand their expectations for social
-          interactions and reward mechanisms.
-        </p>
+        <p>{hatchsterCaseStudy.userFeedback}</p>
       </section>
       <section className="my-grid">
         <h3>The result</h3>
-        <p>
-          The final design transformed how Lotto Social presents lottery
-          participation and user engagement. The app now provides a streamlined
-          and intuitive journey from syndicate selection to result checking,
-          with clear social interaction options and gamification elements.The
-          incorporation of daily challenges and social features has created a
-          more engaging and sticky product.
-        </p>
+        <p>{hatchsterCaseStudy.result.description}</p>
         <ul className="mt-4 list-inside space-y-2">
-          <li>🏆 New user acquisition increased by 15% in the first quarter</li>
-          <li>
-            🏆 User engagement rose by 30%, with average session time doubling
-          </li>
-          <li>🏆 Revenue from in-app purchases grew by 12%</li>
+          {hatchsterCaseStudy.result.achievements.map((achievement, index) => (
+            <li key={index}>{achievement}</li>
+          ))}
         </ul>
       </section>
     </>

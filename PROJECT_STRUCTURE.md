@@ -24,6 +24,11 @@ portfolio-designer/
 │   │   └── 📄 constants.ts        # App constants & config
 │   ├── 📁 types/                  # ✨ NEW: TypeScript definitions
 │   │   └── 📄 index.ts            # Type definitions
+│   ├── 📁 data/                   # ✨ NEW: Data & content
+│   │   ├── 📄 projects.ts         # Projects data
+│   │   ├── 📄 experiences.ts      # Experience data
+│   │   ├── 📄 teams.ts            # Team data
+│   │   └── 📄 contributions.ts    # Contributions data
 │   └── 📁 styles/                 # ✨ NEW: Global styles
 │       └── 📄 globals.css         # Tailwind & global CSS
 └── 📁 public/                     # Static assets
@@ -49,6 +54,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/data/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   // ...
 };
