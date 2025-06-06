@@ -1,7 +1,8 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import projects from "../projects";
+import projects from "@/app/projects";
+import type { NavigationProject } from "@/types";
 
 export default function NextProject() {
   const pathname = usePathname(); // Get the current path
@@ -9,7 +10,7 @@ export default function NextProject() {
 
   // Find the current project's index
   const currentIndex = projects.findIndex(
-    (project) => project.page === pathname
+    (project: NavigationProject) => project.page === pathname
   );
   console.log(currentIndex);
   // Determine the next project, handle wrap-around with modulus operator

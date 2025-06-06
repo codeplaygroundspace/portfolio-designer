@@ -1,0 +1,12 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+- Use the latest version of nextjs.
+- Use the latest version of Tailwindcss.
+- Always use `@/` path aliases for all imports in Next.js projects instead of relative paths (`../`) to maintain clean, readable, and maintainable code that follows Next.js best practices.**
+Examples:
+✅ **Good**: `import Header from "@/components/layout/Header"`  
+❌ **Bad**: `import Header from "../../../components/layout/Header"`
+- Add ✨ emoji in the chat once you finish.

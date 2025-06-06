@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { hatchsterContributions } from "../contributions";
 import { teamHatchster } from "../teams";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import NextProject from "../components/NextProject";
-import TagList from "../components/TagList";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import NextProject from "@/components/sections/NextProject";
+import TagList from "@/components/ui/TagList";
 
 export default function Spoked() {
   return (
