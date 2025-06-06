@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { gatContributions } from "../contributions";
 import { teamGat } from "../teams";
-import Header from "../components/Header";
-import NextProject from "../components/NextProject";
-import Footer from "../components/Footer";
-import TagList from "../components/TagList";
+import Header from "@/components/layout/Header";
+import NextProject from "@/components/sections/NextProject";
+import Footer from "@/components/layout/Footer";
+import TagList from "@/components/ui/TagList";
 
 export default function GlobalAppTesting() {
   return (

@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class", // Add this line to enable class-based dark mode
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -18,4 +18,3 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config;

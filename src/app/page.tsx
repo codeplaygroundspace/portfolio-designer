@@ -2,9 +2,9 @@ import Image from "next/image";
 import projects from "./projects";
 import experiences from "./experiences";
 import Link from "next/link";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import TagList from "./components/TagList";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import TagList from "@/components/ui/TagList";
 
 // Define an interface for the Project props
 interface ProjectProps {
