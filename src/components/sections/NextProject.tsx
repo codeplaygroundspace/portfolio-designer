@@ -18,9 +18,16 @@ export default function NextProject() {
 
   return (
     <section className="my-grid">
-      <Link href={nextProject.page}>
-        <p className="mb-4">Next Project</p>
-        <h2>{nextProject.title}</h2>
+      <Link
+        href={nextProject.page}
+        className="group block hover:text-primary-500 transition-colors duration-200"
+      >
+        <p className="mb-4 text-foreground-secondary group-hover:text-primary-400 transition-colors duration-200">
+          Next Project
+        </p>
+        <h2 className="group-hover:text-primary-500 transition-colors duration-200">
+          {nextProject.title}
+        </h2>
       </Link>
     </section>
   );

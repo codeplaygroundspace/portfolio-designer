@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Tinos, Prompt } from "next/font/google";
+import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import StructuredData from "@/components/seo/StructuredData";
 
-const tinos = Tinos({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-body",
-});
-
-const prompt = Prompt({
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
-  variable: "--font-headers",
+  variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -92,9 +85,11 @@ export default function RootLayout({
         <StructuredData />
       </head>
       <body
-        className={`${tinos.variable} ${prompt.variable} antialiased grid grid-cols-12 sm:gap-4 px-4 lg:px-16 2xl:max-w-fit`}
+        className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
-        {children}
+        <div className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+          {children}
+        </div>
         <Analytics />
         <SpeedInsights />
       </body>

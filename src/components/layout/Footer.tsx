@@ -54,8 +54,8 @@ export default function Footer() {
           </li>
         </ul>
       </nav>
-      <p className="text-sm mt-10">
-        Made with tea + spicy chips. © 2024 Rosina Pissaco
+      <p className="text-[8px] mt-10 text-[rgb(var(--foreground-secondary))]">
+        © 2025 Rosina Pissaco
       </p>
     </section>
   );

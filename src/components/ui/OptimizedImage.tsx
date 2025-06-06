@@ -42,6 +42,36 @@ export default function OptimizedImage({
     );
   }
 
+  if (fill) {
+    return (
+      <>
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-0">
+            <LoadingSpinner size="sm" />
+          </div>
+        )}
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority={priority}
+          sizes={sizes}
+          placeholder={placeholder}
+          blurDataURL={blurDataURL}
+          className={`transition-opacity duration-300 ${
+            isLoading ? "opacity-0" : "opacity-100"
+          } ${className}`}
+          onLoad={() => setIsLoading(false)}
+          onError={() => {
+            setIsLoading(false);
+            setHasError(true);
+          }}
+          quality={85}
+        />
+      </>
+    );
+  }
+
   return (
     <div className={`relative ${className}`}>
       {isLoading && (
@@ -52,9 +82,8 @@ export default function OptimizedImage({
       <Image
         src={src}
         alt={alt}
-        width={fill ? undefined : width}
-        height={fill ? undefined : height}
-        fill={fill}
+        width={width}
+        height={height}
         priority={priority}
         sizes={sizes}
         placeholder={placeholder}
