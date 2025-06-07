@@ -16,6 +16,17 @@ export interface CaseStudy {
     description: string;
     achievements: string[];
   };
+  nextSteps?: {
+    title: string;
+    description: string;
+    alternativeApproach: string;
+    metrics: string[];
+  };
+  learnings?: {
+    title: string;
+    insight: string;
+    description: string;
+  };
   images: {
     hero: string;
     wireframe?: string;

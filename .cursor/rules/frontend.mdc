@@ -6,6 +6,7 @@ alwaysApply: true
 - Use the latest version of nextjs.
 - Use the latest version of Tailwindcss.
 - Follow Frontend developer best practise.
+- Do not change the copy, there is a copywriter who writes the content.
 - Always define types in Typescript, use any as last resource.
 - Always use `@/` path aliases for all imports in Next.js projects instead of relative paths (`../`) to maintain clean, readable, and maintainable code that follows Next.js best practices.**
 Examples:

@@ -31,6 +31,11 @@ const ProjectLayout = ({
     { id: "overview", title: "Overview" },
     { id: "outcome", title: "Outcomes" },
     { id: "contribution", title: "My contribution & team" },
+    { id: "results", title: "Results" },
+    ...(caseStudy.nextSteps ? [{ id: "next-steps", title: "Next Steps" }] : []),
+    ...(caseStudy.learnings
+      ? [{ id: "learnings", title: "What I Learned" }]
+      : []),
   ];
 
   const sections = tableOfContents || defaultTOC;
@@ -140,7 +145,7 @@ const ProjectLayout = ({
                           <span className="text-[rgb(var(--accent))] font-medium text-sm mt-0.5">
                             →
                           </span>
-                          <p className="text-sm sm:text-base leading-relaxed">
+                          <p className="text-sm mb-0 pb-0 sm:text-base leading-relaxed">
                             {consideration}
                           </p>
                         </div>
@@ -354,6 +359,55 @@ const ProjectLayout = ({
                   </div>
                 </div>
               </section>
+
+              {/* Next Steps */}
+              {caseStudy.nextSteps && (
+                <section id="next-steps" className="mb-8 sm:mb-12">
+                  <h3 className="text-xl sm:text-2xl font-semibold leading-tight mb-4">
+                    {caseStudy.nextSteps.title}
+                  </h3>
+                  <div className="mt-4">
+                    <p className="mb-6 text-base sm:text-lg leading-relaxed text-[rgb(var(--foreground-secondary))]">
+                      {caseStudy.nextSteps.description}
+                    </p>
+                    <p className="mb-4 text-base sm:text-lg leading-relaxed text-[rgb(var(--foreground-secondary))]">
+                      {caseStudy.nextSteps.alternativeApproach}
+                    </p>
+                    <div className="space-y-3">
+                      {caseStudy.nextSteps.metrics.map((metric, index) => (
+                        <div
+                          key={index}
+                          className="flex items-start gap-3 p-4 bg-[rgb(var(--background-secondary))]/30 rounded-lg border border-[rgb(var(--border))]"
+                        >
+                          <span className="text-[rgb(var(--accent))] font-medium text-sm mt-0.5">
+                            →
+                          </span>
+                          <p className="text-sm sm:text-base leading-relaxed">
+                            {metric}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+              )}
+
+              {/* Learnings */}
+              {caseStudy.learnings && (
+                <section id="learnings" className="mb-8 sm:mb-12">
+                  <h3 className="text-xl sm:text-2xl font-semibold leading-tight mb-4">
+                    {caseStudy.learnings.title}
+                  </h3>
+                  <div className="mt-4">
+                    <h4 className="text-lg sm:text-xl font-semibold leading-tight mb-3 text-[rgb(var(--header-color-rgb))]">
+                      {caseStudy.learnings.insight}
+                    </h4>
+                    <p className="text-base sm:text-lg leading-relaxed text-[rgb(var(--foreground-secondary))]">
+                      {caseStudy.learnings.description}
+                    </p>
+                  </div>
+                </section>
+              )}
             </div>
           </div>
         </div>
