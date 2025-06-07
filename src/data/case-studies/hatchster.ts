@@ -12,7 +12,7 @@ export const hatchsterCaseStudy: CaseStudy = {
   ],
   problemStatement:
     "Hatchster was experiencing low user retention and engagement, with many users signing up but not participating in lottery groups or returning to the platform. The business goal was to redesign the user experience to build trust, increase engagement, and encourage regular participation in lottery groups. Success would be measured by improved retention rates, increased group participation, and higher user lifetime value.",
-  competitorResearch: {
+  userResearch: {
     description:
       "I analyzed various lottery platforms, social gaming apps, and group buying platforms to understand user expectations and identify opportunities for improvement:",
     considerations: [
@@ -46,3 +46,20 @@ export const hatchsterCaseStudy: CaseStudy = {
     company: "Hatchster",
   },
 };
+
+export const hatchsterContributions = [
+  "User Research",
+  "Trust & Safety Design",
+  "Visual Design",
+  "Prototyping",
+  "User Testing",
+  "Social Features",
+];
+
+export const hatchsterTeam = [
+  "1 Product Designer (me)",
+  "2 Frontend Developers",
+  "1 Backend Developer",
+  "1 Product Manager",
+  "1 Marketing Manager",
+];

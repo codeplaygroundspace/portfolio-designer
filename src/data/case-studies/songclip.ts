@@ -12,7 +12,7 @@ export const songclipCaseStudy: CaseStudy = {
   ],
   problemStatement:
     "Songclip was seeking to address a significant gap in the digital content market: the lack of accessible, legally compliant tools for integrating short, popular music clips into social media posts, messages, and other digital content. The business goal was clear - to create a solution that would allow platforms to easily incorporate 5-30 second meta-tagged music clips, enriching user experiences across various apps and potentially opening new revenue streams. Success would be measured by the seamless integration of our technology into partner platforms and the subsequent increase in user engagement with music-enhanced content.",
-  competitorResearch: {
+  userResearch: {
     description:
       "Integration of music clips into social and messaging platforms is not entirely new, so after understanding the requirements, I began by examining existing solutions. This investigation highlighted several key considerations:",
     considerations: [
@@ -70,3 +70,19 @@ export const songclipCaseStudy: CaseStudy = {
     company: "Songclip",
   },
 };
+
+export const songclipContributions = [
+  "User Research",
+  "Wireframing",
+  "Prototyping",
+  "Visual Design",
+  "User Testing",
+  "Design System",
+];
+
+export const songclipTeam = [
+  "1 Product Designer (me)",
+  "2 Frontend Developers",
+  "2 Backend Developers",
+  "1 Product Manager",
+];
