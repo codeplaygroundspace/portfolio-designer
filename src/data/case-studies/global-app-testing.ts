@@ -48,10 +48,31 @@ export const globalAppTestingCaseStudy: CaseStudy = {
       "🏆 Test completion rate increased by 28%",
     ],
   },
+  nextSteps: {
+    title: "Where do we go from here?",
+    description:
+      "First, I would recommend conducting usability testing again with new participants. Have the changes made it easier for users to complete their tasks?",
+    alternativeApproach:
+      "If usability testing is not an option, I would recommend tracking the following metrics:",
+    metrics: [
+      "What percentage of Test Managers are currently using the new software?",
+      "How has the new software impacted the testing delivery time and results quality?",
+    ],
+  },
+  learnings: {
+    title: "What I learned",
+    insight: "Communicating design decisions in light of the business goals.",
+    description:
+      "It is much easier and natural for me to explain my decisions based on user insights. However, it is equally valuable to consider how those decisions also support the business goals.",
+  },
   images: {
     hero: "/portfolio-gat/gat-header.jpg",
     wireframe: "/portfolio-gat/gat-wireframe.png",
+    wireframeCaption:
+      "Lo-fi Wireframes of the new platform showing the new platform's interface and how it will be used by Test Managers.",
     hiFidelity: "/portfolio-gat/gat-hi-fidelity.png",
+    hiFidelityCaption:
+      "Hi-fi Designs of the new platform showing how many testers have performed the test, status and progress of the test.",
     userResearchImage: "/portfolio-gat/gat-tickets.png",
     userResearchImageCaption:
       "Miro board analysis of user research findings, mapping out the key insights and pain points discovered during our weekly observation sessions with Test Managers.",
