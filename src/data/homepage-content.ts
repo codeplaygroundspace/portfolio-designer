@@ -1,13 +1,12 @@
 export const heroContent = {
   availability: "Available for new opportunities",
   headline: {
-    greeting: "Hey, I'm",
-    name: "Rosina",
-    title: "Product Designer crafting meaningful experiences",
-    subtitle: "",
+    greeting: "Hello, I'm Rosina",
+    subtitle:
+      "Strategic Product Designer & Growth Catalyst. User-centered strategist and design leader with a proven track record of driving measurable results",
   },
   description:
-    "I help startups and scale-ups design products that users love and businesses grow. Currently designing the future of finance at NestEgg.",
+    "I am a product designer who transforms early-stage ideas into products that users love and businesses depend on. With 10+ years of experience, I specialise in 0-1 product development, user research, and working with cross-functional teams to deliver meaningful impact. My expertise spans the full design process - from initial concept through to launch - with a focus on creating intuitive experiences that drive real business growth. I thrive on solving complex challenges for ambitious startups, using human-centred design to create products that matter rather than just pretty interfaces.",
   location: "Bristol, UK",
   cta: {
     primary: "View My Work",

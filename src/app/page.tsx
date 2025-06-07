@@ -8,11 +8,11 @@ import {
   resumeContent,
 } from "@/data/homepage-content";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import TagList from "@/components/ui/TagList";
 import ProjectCard from "@/components/ui/ProjectCard";
-import AvailabilityBadge from "@/components/ui/AvailabilityBadge";
 import {
   ArrowUpRight,
   ArrowDown,
@@ -55,26 +55,12 @@ function HeroSection() {
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
       <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
         <div className="flex-1">
-          <div className="mb-6">
-            <AvailabilityBadge text={heroContent.availability} />
-          </div>
-
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6 tracking-tight text-balance">
-            {heroContent.headline.greeting}{" "}
-            <span className="text-[rgb(var(--accent))]">
-              {heroContent.headline.name}
-            </span>
-            <br />
-            {heroContent.headline.title}
-            {heroContent.headline.subtitle && (
-              <>
-                <br />
-                <span className="text-[rgb(var(--foreground-secondary))]">
-                  {heroContent.headline.subtitle}
-                </span>
-              </>
-            )}
+            {heroContent.headline.greeting} <br />
           </h1>
+          <h3 className="text-sm sm:text-base font-bold leading-tight mb-6 tracking-tight text-balance text-[rgb(var(--foreground-secondary))]">
+            {heroContent.headline.subtitle}
+          </h3>
 
           <p className="text-base sm:text-lg font-medium mb-8 text-[rgb(var(--foreground-secondary))] max-w-2xl leading-relaxed">
             {heroContent.description}
@@ -100,10 +86,15 @@ function HeroSection() {
 
         <div className="lg:w-80 xl:w-96 flex-shrink-0">
           <div className="relative">
-            <div className="w-full aspect-square bg-gradient-to-br from-[rgb(var(--accent))]/20 to-[rgb(var(--accent))]/5 rounded-2xl flex items-center justify-center">
-              <div className="w-3/4 h-3/4 bg-[rgb(var(--background-secondary))] rounded-xl flex items-center justify-center">
-                <span className="text-6xl">👋</span>
-              </div>
+            <div className="w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[rgb(var(--accent))]/10 to-[rgb(var(--accent))]/5 p-2">
+              <Image
+                src="/profile.jpeg"
+                alt="Rosina Pissaco - Product Designer"
+                width={400}
+                height={400}
+                priority
+                className="w-full h-full object-cover rounded-xl"
+              />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-[rgb(var(--background))] border border-[rgb(var(--border))] rounded-lg px-3 py-2 shadow-lg">
               <div className="flex items-center gap-2">
