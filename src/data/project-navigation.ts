@@ -24,4 +24,5 @@ const projects = [
     img: "/portfolio-thumbnail/thumbnail-hatchster.png",
   },
 ];
+
 export default projects;

@@ -8,7 +8,7 @@ export interface CaseStudy {
   webAppDesign?: string;
   thirdPartyIntegrations?: string;
   userFeedback?: string;
-  competitorResearch: {
+  userResearch: {
     description: string;
     considerations: string[];
   };
@@ -19,9 +19,15 @@ export interface CaseStudy {
   images: {
     hero: string;
     wireframe?: string;
+    wireframeCaption?: string;
     hiFidelity?: string;
+    hiFidelityCaption?: string;
     webApp?: string;
     api?: string;
+    userResearchImage?: string;
+    userResearchImageCaption?: string;
+    userResearchImage2?: string;
+    userResearchImage2Caption?: string;
     animations?: Array<{
       src: string;
       alt: string;

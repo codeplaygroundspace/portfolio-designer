@@ -1,24 +1,40 @@
 import { CaseStudy } from "@/types/projects";
 
+export const spokedContributions = [
+  "User Research",
+  "Information Architecture",
+  "Wireframing",
+  "Visual Design",
+  "Prototyping",
+  "User Testing",
+];
+
+export const spokedTeam = [
+  "1 Product Designer (me)",
+  "2 iOS Developer",
+  "2 Backend Developers",
+  "CEO",
+];
+
 export const spokedCaseStudy: CaseStudy = {
   slug: "spoked",
   title: "Redesigning Spoked",
   overview:
-    "Spoked is a fitness app designed to help cyclists track their performance and connect with the cycling community. As the Product Designer, I was tasked with simplifying the user experience to boost new user retention. The challenge was to create an intuitive interface that would appeal to both casual cyclists and serious athletes while maintaining the app's comprehensive tracking capabilities.",
+    "Spoked is a smart cycling coach offering personalised training plans. To meet revenue targets, I was tasked with redesigning the mobile app to lower the barrier for beginners and increase new user retention.The existing app’s complexity made it difficult for newcomers to engage. After conducting user research, I simplified the content and interface to create a more intuitive experience, making the app accessible for novices while still engaging for advanced cyclists.",
   outcomes: [
-    "🏆 New user retention increased by 22%",
-    "🏆 User engagement improved by 35%",
-    "🏆 App Store rating increased to 4.8 stars",
+    "🏆 Projected revenue increase of 15%",
+    "🏆 New users retention increased by 22%",
+    "🏆 Annual revenue targets achived",
   ],
   problemStatement:
-    "Spoked was facing challenges with new user retention, as many users found the initial experience overwhelming and abandoned the app after the first few sessions. The business goal was to simplify the onboarding process and core features to make the app more accessible to casual cyclists while maintaining the advanced features that power users valued. Success would be measured by improved retention rates and increased daily active users.",
-  competitorResearch: {
+    "As this project was directly linked to a key business goal, I needed to fully understand the project purpose and the criteria for success before starting any research or design work. Spoked aimed to increase the percentage of new users and improve retention.",
+  userResearch: {
     description:
-      "To understand the fitness app landscape, I analyzed leading cycling and fitness applications to identify best practices and opportunities for differentiation:",
+      "I conducted a user research session to observe how users interact with the current product and how it fits into their training sessions and daily routines. From this study we discovered the following insights:",
     considerations: [
-      "👉 How do successful fitness apps onboard new users?",
-      "👉 What features are essential vs. nice-to-have for casual cyclists?",
-      "👉 How can we balance simplicity with comprehensive tracking?",
+      "Users wanted personalised training plans based on their individual goals.",
+      "Users sometimes stopped using the app when injured or on holiday.",
+      "Different user groups had varied training goals and needs.",
     ],
   },
   designSolution:
@@ -37,7 +53,14 @@ export const spokedCaseStudy: CaseStudy = {
   images: {
     hero: "/portfolio-spoked/header.png",
     wireframe: "/portfolio-spoked/spoked-User-flow@2x.jpg",
+    wireframeCaption:
+      "User flow wireframes showing the simplified onboarding process and core user journeys, designed to reduce complexity and improve new user retention.",
     hiFidelity: "/portfolio-spoked/spoked-Plan-builder@2x.png",
+    hiFidelityCaption:
+      "High-fidelity designs of the plan builder interface, featuring a clean and intuitive design that makes creating personalised training plans accessible to cyclists of all levels.",
+    userResearchImage: "/portfolio-spoked/spoked-Journey-map@2x.jpeg",
+    userResearchImageCaption:
+      "User's Journey Map showing the emotional journey and key touchpoints throughout the cycling training app experience, from creating an account to setup weekly training plans.",
   },
   metadata: {
     year: "2021",

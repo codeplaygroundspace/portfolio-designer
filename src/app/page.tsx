@@ -1,4 +1,4 @@
-import projects from "@/data/projects";
+import projects from "@/data/project-navigation";
 import experiences from "@/data/experiences";
 import {
   heroContent,
@@ -6,7 +6,7 @@ import {
   projectsContent,
   contactContent,
   resumeContent,
-} from "@/data/content";
+} from "@/data/homepage-content";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -22,6 +22,7 @@ import {
   MapPin,
   Calendar,
 } from "lucide-react";
+import { FaDribbble } from "react-icons/fa";
 
 // Define an interface for the Experience props
 interface ExperienceProps {
@@ -38,7 +39,7 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
-        <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 py-8 sm:py-12 lg:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20 py-8 sm:py-12 lg:py-16">
           <ProjectsSection />
           <ExperiencesSection />
         </div>
@@ -51,7 +52,7 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 lg:py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
       <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
         <div className="flex-1">
           <div className="mb-6">
@@ -121,7 +122,7 @@ function HeroSection() {
 
 function AboutSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-8 sm:py-12 lg:py-16">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
       <div className="flex flex-col lg:flex-row gap-8 sm:gap-12 lg:gap-20">
         <div className="lg:w-2/3">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 tracking-tight text-balance">
@@ -232,6 +233,7 @@ function ExperiencesSection() {
           />
         ))}
         <ResumeDownloadLink />
+        <DribbbleLink />
       </div>
     </aside>
   );
@@ -276,7 +278,10 @@ function ExperienceCard({
 
 function ContactSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 lg:py-16" id="contact">
+    <section
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16"
+      id="contact"
+    >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 tracking-tight">
           {contactContent.title}
@@ -318,6 +323,25 @@ function ResumeDownloadLink() {
     >
       <Download size={16} className="text-[rgb(var(--accent))] shrink-0" />
       <span className="font-medium flex-1">{resumeContent.text}</span>
+      <ArrowUpRight
+        size={14}
+        className="text-[rgb(var(--foreground-secondary))] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200 shrink-0"
+      />
+    </a>
+  );
+}
+
+function DribbbleLink() {
+  return (
+    <a
+      href="https://dribbble.com/rosieportfolio"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="w-full inline-flex items-center gap-2 p-4 sm:p-5 rounded-lg border border-[rgb(var(--border))] hover:bg-[rgb(var(--background-secondary))] transition-colors duration-200 group"
+      aria-label="View Dribbble Portfolio"
+    >
+      <FaDribbble size={16} className="text-[rgb(var(--accent))] shrink-0" />
+      <span className="font-medium flex-1">View Dribbble</span>
       <ArrowUpRight
         size={14}
         className="text-[rgb(var(--foreground-secondary))] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200 shrink-0"

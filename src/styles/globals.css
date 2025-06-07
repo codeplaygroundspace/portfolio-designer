@@ -390,10 +390,6 @@ main {
   @apply w-full;
 }
 
-section {
-  @apply px-4 py-8 md:px-8 lg:px-12;
-}
-
 /* Focus styles for accessibility */
 *:focus-visible {
   @apply outline-2 outline-offset-2 outline-[rgb(var(--accent))];

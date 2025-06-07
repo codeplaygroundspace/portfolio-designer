@@ -87,9 +87,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
-        <div className="flex-1 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-          {children}
-        </div>
+        <div className="flex-1 w-full">{children}</div>
         <Analytics />
         <SpeedInsights />
       </body>

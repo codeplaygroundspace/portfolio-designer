@@ -1,33 +1,47 @@
 import { CaseStudy } from "@/types/projects";
 
+export const globalAppTestingContributions = [
+  "User research",
+  "UX/UI design",
+  "Prototyping",
+  "B2B and B2C UX",
+];
+
+export const globalAppTestingTeam = [
+  "1 Product Designer (me)",
+  "5 Engineers",
+  "1 Product Manager",
+  "1 Data Scientist",
+];
+
 export const globalAppTestingCaseStudy: CaseStudy = {
   slug: "global-app-testing",
-  title: "Redesigning Global App Testing Platform",
+  title: "Design an AI testing platform",
   overview:
-    "Global App Testing is a crowdsourced testing platform that connects businesses with a global community of testers. As the Product Designer, I was tasked with redesigning the testing platform to increase efficiency and improve the user experience for both test managers and testers. The challenge was to create an intuitive interface that could handle complex testing workflows while making the platform accessible to users with varying technical expertise.",
+    "Global App Testing (GAT) helps businesses ensure their software quality through crowdsourced testing. In order to meet revenue targets, the product team was given the challenge of integrating AI and machine learning into the testing processes. After brainstorming, we decided to focus on creating an AI-powered platform to assist Test Managers. My early assumption was that users would be skeptical about AI taking over parts of their job. I conducted extensive user research to figure out how to introduce AI in a way that would appeal to users and meet the busines goals.",
   outcomes: [
-    "🏆 Testing efficiency increased by 35%",
-    "🏆 User satisfaction improved by 50%",
-    "🏆 Test completion rate increased by 28%",
+    "🏆 Successfully launched an MVP in 6 months",
+    "🏆 Operational overhead reduced by 20%",
+    "🏆 Adoption reached 35% in the first 6 months",
   ],
   problemStatement:
-    "Global App Testing was facing challenges with platform efficiency and user experience. Test managers found it difficult to set up and manage testing campaigns, while testers struggled with unclear instructions and complex workflows. The business goal was to streamline the testing process, improve user satisfaction, and increase the overall efficiency of the platform. Success would be measured by faster test completion times, higher user satisfaction scores, and increased platform usage.",
-  competitorResearch: {
+    "Since this project was directly aligned with a critical business objective, I prioritized understanding the project's purpose and success criteria before beginning any research or design work. GAT was seeking opportunities to reduce operational overhead and free up Test Manager capacity, allowing them to focus on higher-value activities.",
+  userResearch: {
     description:
-      "I analyzed various testing platforms, project management tools, and crowdsourcing platforms to understand best practices and identify opportunities for improvement:",
+      "We ran weekly user research sessions to observe Test Managers navigating their current processes. From this study we discovered the following insights:",
     considerations: [
-      "👉 How do successful testing platforms organize complex workflows?",
-      "👉 What features are essential for effective test management?",
-      "👉 How can we improve communication between test managers and testers?",
+      "The testing process involved distinct stages: launching tests, moderating results, and delivering outcomes.",
+      "Test Managers were using spreadsheets for all data management.",
+      "Each stage involved multiple manual tasks, consuming significant time.",
     ],
   },
   designSolution:
-    "The solution focused on simplifying the user interface, improving workflow organization, and enhancing communication features. I redesigned the dashboard to provide clear visibility into testing progress, created intuitive test setup flows, and implemented better feedback mechanisms. The new design emphasized clarity, efficiency, and user guidance throughout the testing process.",
+    "Solution design involved user testing and multiple iterations. High-level logic was mapped out, followed by prototypes. We explored various options, particularly around automating decision-making processes. The challenge was presenting complex testing data in a simple, easy-to-understand way while incorporating AI assistance.",
   userFeedback:
-    "Through extensive user testing with both test managers and testers, we identified key pain points and validated design improvements. Users appreciated the clearer navigation, improved test instructions, and better progress tracking features.",
+    "Prototypes were iterated on after remote user testing sessions. Users were asked to complete a full testing cycle using the designs. We observed their understanding of the AI-assisted process and followed up to understand how they expected the new system to impact their workflow.",
   result: {
     description:
-      "The redesigned Global App Testing platform successfully addressed efficiency and usability challenges. The new interface made it easier for test managers to create and manage testing campaigns while providing testers with clearer instructions and better tools to complete their work effectively.",
+      "The final design transformed the way Global App Testing Managers run the testing process. The new platform stores and tracks data previously managed in spreadsheets. It uses machine learning and AI to automate most of the Test Managers decisions and actions.",
     achievements: [
       "🏆 Testing efficiency increased by 35%",
       "🏆 User satisfaction improved by 50%",
@@ -38,6 +52,12 @@ export const globalAppTestingCaseStudy: CaseStudy = {
     hero: "/portfolio-gat/gat-header.jpg",
     wireframe: "/portfolio-gat/gat-wireframe.png",
     hiFidelity: "/portfolio-gat/gat-hi-fidelity.png",
+    userResearchImage: "/portfolio-gat/gat-tickets.png",
+    userResearchImageCaption:
+      "Miro board analysis of user research findings, mapping out the key insights and pain points discovered during our weekly observation sessions with Test Managers.",
+    userResearchImage2: "/portfolio-gat/gat-tickets-2.png",
+    userResearchImage2Caption:
+      "Spreadsheet used by Test Managers to manually manage their testing process.",
   },
   metadata: {
     year: "2023",
