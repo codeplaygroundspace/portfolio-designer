@@ -20,7 +20,7 @@ export const spokedCaseStudy: CaseStudy = {
   slug: "spoked",
   title: "Redesigning Spoked",
   overview:
-    "Spoked is a smart cycling coach offering personalised training plans. To meet revenue targets, I was tasked with redesigning the mobile app to lower the barrier for beginners and increase new user retention.The existing app’s complexity made it difficult for newcomers to engage. After conducting user research, I simplified the content and interface to create a more intuitive experience, making the app accessible for novices while still engaging for advanced cyclists.",
+    "Spoked is a smart cycling coach offering personalised training plans. To meet revenue targets, I was tasked with redesigning the mobile app to lower the barrier for beginners and increase new user retention.The existing app's complexity made it difficult for newcomers to engage. After conducting user research, I simplified the content and interface to create a more intuitive experience, making the app accessible for novices while still engaging for advanced cyclists.",
   outcomes: [
     "🏆 Projected revenue increase of 15%",
     "🏆 New users retention increased by 22%",
@@ -39,6 +39,39 @@ export const spokedCaseStudy: CaseStudy = {
   },
   designSolution:
     "The solution focused on streamlining the user journey from onboarding through daily use. I redesigned the information architecture to prioritize core features and created a progressive disclosure system that gradually introduced advanced features as users became more engaged. The new design emphasized visual feedback and achievement systems to motivate continued use.",
+  hiFidelityScreens: {
+    title: "Hi fidelity screens",
+    video: {
+      url: "https://www.youtube.com/watch?v=l281eYRTF2Y",
+      title: "Spoked Hi-Fi Screens Demo",
+      caption:
+        "Interactive demonstration of the final high-fidelity designs showcasing the streamlined user interface and improved navigation flow that contributed to the 22% increase in new user retention.",
+    },
+  },
+  designSystem: {
+    description:
+      "To ensure consistency and scalability across the Spoked app, I design a comprehensive design system. This system includes a carefully curated color palette, typography hierarchy, and a library of reusable components. Typography selections were made to optimize legibility for cyclists who may be viewing the app in various lighting conditions and while in motion.",
+    images: [
+      "/portfolio-spoked/spoked-Colour-palette@2x.jpeg",
+      "/portfolio-spoked/spoked-Colour+palette@2x-1.jpeg",
+    ],
+  },
+  components: {
+    video: {
+      url: "https://www.youtube.com/watch?v=tX0BvokB4Vc",
+      title: "Spoked Components Demo",
+      caption:
+        "Comprehensive overview of the modular component library designed for consistency across the Spoked app, featuring cycling-optimized typography and accessibility considerations for outdoor use.",
+    },
+  },
+  prototype: {
+    video: {
+      url: "https://www.youtube.com/watch?v=N7kU7BBNg7c",
+      title: "Spoked Prototype Demo",
+      caption:
+        "Interactive prototype walkthrough demonstrating the simplified onboarding process and core user journeys that helped validate design decisions and reduce complexity for new cyclists.",
+    },
+  },
   userFeedback:
     "Through user testing sessions with both new and existing users, we validated the simplified interface and identified key pain points in the original design. Users appreciated the cleaner interface and found the new onboarding process much more intuitive.",
   result: {
@@ -49,6 +82,24 @@ export const spokedCaseStudy: CaseStudy = {
       "🏆 User engagement improved by 35%",
       "🏆 App Store rating increased to 4.8 stars",
     ],
+  },
+  nextSteps: {
+    title: "Where do we go from here?",
+    description:
+      "First, I would recommend conducting usability testing again with new participants. Have the changes made it easier for users to complete their training setup and daily cycling tasks?",
+    alternativeApproach:
+      "If usability testing is not an option, I would recommend tracking the following metrics:",
+    metrics: [
+      "What percentage of new users are completing the onboarding process?",
+      "How has the redesign impacted training plan completion rates and user engagement?",
+      "Are users finding it easier to track their cycling progress and achieve their fitness goals?",
+    ],
+  },
+  learnings: {
+    title: "What I learned",
+    insight: "Communicating design decisions in light of the business goals.",
+    description:
+      "It is much easier and natural for me to explain my decisions based on user insights. However, it is equally valuable to consider how those decisions also support the business goals and revenue targets.",
   },
   images: {
     hero: "/portfolio-spoked/header.png",
