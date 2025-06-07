@@ -16,13 +16,20 @@ export const songclipCaseStudy: CaseStudy = {
     description:
       "Integration of music clips into social and messaging platforms is not entirely new, so after understanding the requirements, I began by examining existing solutions. This investigation highlighted several key considerations:",
     considerations: [
-      "👉 How do we curate and present music clips to match user preferences?",
-      "👉 How do we ensure seamless integration across various platforms?",
-      "👉 What UI elements will feel familiar to users of TikTok, Instagram, and Snapchat?",
+      "How do we curate and present music clips to match user preferences?",
+      "How do we ensure seamless integration across various platforms?",
+      "What UI elements will feel familiar to users of TikTok, Instagram, and Snapchat?",
     ],
   },
   designSolution:
-    "The solution design process for Spoked involved extensive iteration and user testing. I initially created a detailed user journey map to outline key touchpoints and interactions. This was followed by developing prototypes and exploring various approaches to personalising training plans and boosting user engagement. The challenge was to distill complex training data and features into a streamlined, intuitive experience that would be accessible for both beginners and advanced cyclists.",
+    "The solution design process for Songclip involved extensive iteration and user testing. I initially created a detailed user journey map to outline key touchpoints and interactions. This was followed by developing prototypes and exploring various approaches to music discovery, clip preview, and seamless sharing across platforms. The challenge was to distill complex music licensing and integration features into a streamlined, intuitive experience that would be accessible for content creators and social media users.",
+  videos: [
+    {
+      url: "https://www.youtube.com/watch?v=l281eYRTF2Y",
+      title: "Songclip Demo",
+      description: "Overview of the Songclip platform and user experience",
+    },
+  ],
   webAppDesign:
     "In order to reach non-iOS users, I also designed a Progressive Web Application suitable for users on desktop and mobile.",
   thirdPartyIntegrations:
@@ -37,6 +44,24 @@ export const songclipCaseStudy: CaseStudy = {
       "🏆 Average clip search and share time reduced by 21%",
       "🏆 The 10 Most Innovative Companies in Music 2020",
     ],
+  },
+  nextSteps: {
+    title: "Where do we go from here?",
+    description:
+      "First, I would recommend conducting usability testing again with new participants. Have the changes made it easier for users to discover, preview, and share music clips?",
+    alternativeApproach:
+      "If usability testing is not an option, I would recommend tracking the following metrics:",
+    metrics: [
+      "What percentage of users are successfully completing the music search and share flow?",
+      "How has the redesign impacted music clip discovery time and user engagement?",
+      "Are content creators finding it easier to integrate music into their social media posts?",
+    ],
+  },
+  learnings: {
+    title: "What I learned",
+    insight: "Communicating design decisions in light of the business goals.",
+    description:
+      "It is much easier and natural for me to explain my decisions based on user insights. However, it is equally valuable to consider how those decisions also support the business goals and platform growth objectives.",
   },
   images: {
     hero: "/portfolio-songclip/songclip-hero.jpeg",

@@ -8,6 +8,46 @@ export interface CaseStudy {
   webAppDesign?: string;
   thirdPartyIntegrations?: string;
   userFeedback?: string;
+  designSystem?: {
+    description: string;
+    images?:
+      | Array<{
+          src: string;
+          caption?: string;
+        }>
+      | string[];
+  };
+  components?: {
+    video?: {
+      url: string;
+      title?: string;
+      description?: string;
+      caption?: string;
+    };
+  };
+  prototype?: {
+    video?: {
+      url: string;
+      title?: string;
+      description?: string;
+      caption?: string;
+    };
+  };
+  hiFidelityScreens?: {
+    title: string;
+    video?: {
+      url: string;
+      title?: string;
+      description?: string;
+      caption?: string;
+    };
+  };
+  videos?: Array<{
+    url: string;
+    title?: string;
+    description?: string;
+    caption?: string;
+  }>;
   userResearch: {
     description: string;
     considerations: string[];

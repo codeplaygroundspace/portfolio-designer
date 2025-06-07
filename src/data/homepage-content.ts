@@ -71,11 +71,11 @@ export const contactContent = {
   cta: {
     primary: {
       text: "Get In Touch",
-      href: "mailto:rosina@example.com",
+      href: "mailto:rosinaa@gmail.com",
     },
     secondary: {
       text: "LinkedIn",
-      href: "https://linkedin.com/in/rosina",
+      href: "https://www.linkedin.com/in/rosieprofile/",
     },
   },
 };

@@ -249,6 +249,163 @@ const ProjectLayout = ({
                 </section>
               )}
 
+              {/* Hi fidelity screens with video */}
+              {caseStudy.hiFidelityScreens && (
+                <section id="hifi-screens" className="mb-8 sm:mb-12">
+                  <h3 className="text-xl sm:text-2xl font-semibold leading-tight mb-4">
+                    {caseStudy.hiFidelityScreens.title}
+                  </h3>
+                  {caseStudy.hiFidelityScreens.video && (
+                    <div className="mt-4">
+                      <div className="aspect-video rounded-2xl overflow-hidden bg-gray-100">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${
+                            caseStudy.hiFidelityScreens.video.url.split("v=")[1]
+                          }`}
+                          title={
+                            caseStudy.hiFidelityScreens.video.title ||
+                            "Hi-fidelity screens demo"
+                          }
+                          className="w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                      {caseStudy.hiFidelityScreens.video.description && (
+                        <p className="mt-4 text-sm text-[rgb(var(--foreground-secondary))] text-center italic">
+                          {caseStudy.hiFidelityScreens.video.description}
+                        </p>
+                      )}
+                      {caseStudy.hiFidelityScreens.video.caption && (
+                        <figcaption className="mt-4 text-xs text-[rgb(var(--foreground-secondary))] text-center italic leading-relaxed">
+                          {caseStudy.hiFidelityScreens.video.caption}
+                        </figcaption>
+                      )}
+                    </div>
+                  )}
+                </section>
+              )}
+
+              {/* Design System */}
+              {caseStudy.designSystem && (
+                <section id="design-system" className="mb-8 sm:mb-12">
+                  <h3 className="text-xl sm:text-2xl font-semibold leading-tight mb-4">
+                    Design system
+                  </h3>
+                  <div className="mt-4">
+                    <p className="text-base sm:text-lg leading-relaxed text-[rgb(var(--foreground-secondary))] mb-6">
+                      {caseStudy.designSystem.description}
+                    </p>
+                    {caseStudy.designSystem.images &&
+                      caseStudy.designSystem.images.length > 0 && (
+                        <div className="space-y-6">
+                          {caseStudy.designSystem.images.map((image, index) => {
+                            const imageSrc =
+                              typeof image === "string" ? image : image.src;
+                            const imageCaption =
+                              typeof image === "string"
+                                ? undefined
+                                : image.caption;
+
+                            return (
+                              <div key={index}>
+                                <Image
+                                  src={imageSrc}
+                                  alt={`${caseStudy.title} design system ${
+                                    index + 1
+                                  }`}
+                                  className="rounded-2xl w-full hover:shadow-lg transition-shadow duration-300"
+                                  width={1640}
+                                  height={400}
+                                  priority
+                                />
+                                {imageCaption && (
+                                  <figcaption className="mt-4 text-xs text-[rgb(var(--foreground-secondary))] text-center italic leading-relaxed">
+                                    {imageCaption}
+                                  </figcaption>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                  </div>
+                </section>
+              )}
+
+              {/* Components */}
+              {caseStudy.components && (
+                <section id="components" className="mb-8 sm:mb-12">
+                  <h3 className="text-xl sm:text-2xl font-semibold leading-tight mb-4">
+                    Components
+                  </h3>
+                  {caseStudy.components.video && (
+                    <div className="mt-4">
+                      <div className="aspect-video rounded-2xl overflow-hidden bg-gray-100">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${
+                            caseStudy.components.video.url.split("v=")[1]
+                          }`}
+                          title={
+                            caseStudy.components.video.title ||
+                            "Components demo"
+                          }
+                          className="w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                      {caseStudy.components.video.description && (
+                        <p className="mt-4 text-sm text-[rgb(var(--foreground-secondary))] text-center italic">
+                          {caseStudy.components.video.description}
+                        </p>
+                      )}
+                      {caseStudy.components.video.caption && (
+                        <figcaption className="mt-4 text-xs text-[rgb(var(--foreground-secondary))] text-center italic leading-relaxed">
+                          {caseStudy.components.video.caption}
+                        </figcaption>
+                      )}
+                    </div>
+                  )}
+                </section>
+              )}
+
+              {/* Prototype */}
+              {caseStudy.prototype && (
+                <section id="prototype" className="mb-8 sm:mb-12">
+                  <h3 className="text-xl sm:text-2xl font-semibold leading-tight mb-4">
+                    Prototype
+                  </h3>
+                  {caseStudy.prototype.video && (
+                    <div className="mt-4">
+                      <div className="aspect-video rounded-2xl overflow-hidden bg-gray-100">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${
+                            caseStudy.prototype.video.url.split("v=")[1]
+                          }`}
+                          title={
+                            caseStudy.prototype.video.title || "Prototype demo"
+                          }
+                          className="w-full h-full"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                      {caseStudy.prototype.video.description && (
+                        <p className="mt-4 text-sm text-[rgb(var(--foreground-secondary))] text-center italic">
+                          {caseStudy.prototype.video.description}
+                        </p>
+                      )}
+                      {caseStudy.prototype.video.caption && (
+                        <figcaption className="mt-4 text-xs text-[rgb(var(--foreground-secondary))] text-center italic leading-relaxed">
+                          {caseStudy.prototype.video.caption}
+                        </figcaption>
+                      )}
+                    </div>
+                  )}
+                </section>
+              )}
+
               {/* Micro Animations */}
               {caseStudy.images.animations &&
                 caseStudy.images.animations.length > 0 && (
