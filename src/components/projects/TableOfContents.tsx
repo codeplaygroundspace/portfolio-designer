@@ -26,7 +26,7 @@ const TableOfContents = ({ sections }: TableOfContentsProps) => {
 
   return (
     <div className="hidden lg:block w-64 flex-shrink-0">
-      <div className="">
+      <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
         <div className="bg-[rgb(var(--background-secondary))] rounded-xl p-4 sm:p-4 shadow-sm border border-[rgb(var(--border))]">
           <h5 className="text-[11px] font-semibold mb-4 pb-2 border-b border-[rgb(var(--border))] text-[rgb(var(--foreground-secondary))] uppercase tracking-wide">
             Table of Contents

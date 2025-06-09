@@ -46,7 +46,7 @@ const ProjectLayout = ({
       <Header />
       <main className="flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-          <div className="lg:flex lg:gap-8 lg:items-start">
+          <div className="lg:flex lg:gap-8">
             <TableOfContents sections={sections} />
 
             <div className="flex-1 max-w-4xl lg:min-h-screen">
