@@ -16,32 +16,72 @@ const HeroSection = () => {
     }
   }, [isInView, controls]);
 
-  // Typewriter animation variants
-  const typewriterVariants = {
-    hidden: { opacity: 0 },
+  // Left-to-right fade reveal animation for main heading
+  const fadeRevealVariants = {
+    hidden: {
+      opacity: 0,
+      clipPath: "inset(0 100% 0 0)",
+    },
     visible: {
       opacity: 1,
+      clipPath: "inset(0 0% 0 0)",
       transition: {
-        staggerChildren: 0.03,
-        delayChildren: 0.5,
+        duration: 1.5,
+        ease: "easeOut",
+        delay: 0.5,
       },
     },
   };
 
-  const letterVariants = {
+  // Left-to-right blur reveal animation with subtle wave effect
+  const blurRevealVariants = {
     hidden: {
       opacity: 0,
-      y: 20,
+      filter: "blur(10px)",
+      clipPath: "inset(0 100% 0 0)",
     },
     visible: {
       opacity: 1,
-      y: 0,
+      filter: "blur(0px)",
+      clipPath: "inset(0 0% 0 0)",
       transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 20,
+        duration: 1.2,
+        ease: "easeOut",
+        filter: { duration: 0.8 },
+        clipPath: { duration: 1.2, ease: "easeInOut" },
+        staggerChildren: 0.02,
+        delayChildren: 0.4,
       },
     },
+  };
+
+  // Elegant wave animation for individual words
+  const wordVariants = {
+    hidden: {
+      y: 3,
+      opacity: 0.85,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  };
+
+  // Function to split text into words for subtle wave effect
+  const splitTextIntoWords = (text: string) => {
+    return text.split(" ").map((word, index) => (
+      <motion.span
+        key={index}
+        variants={wordVariants}
+        className="inline-block mr-1"
+      >
+        {word}
+      </motion.span>
+    ));
   };
 
   // Smooth spring animations
@@ -53,7 +93,7 @@ const HeroSection = () => {
         type: "spring",
         stiffness: 100,
         damping: 15,
-        staggerChildren: 0.15,
+        staggerChildren: 0.3,
         delayChildren: 0.2,
       },
     },
@@ -104,20 +144,6 @@ const HeroSection = () => {
     },
   };
 
-  // Function to split text into individual characters for typewriter effect
-  const splitText = (text: string) => {
-    return text.split("").map((char, index) => (
-      <motion.span
-        key={index}
-        variants={letterVariants}
-        className="inline-block"
-        style={{ willChange: "transform, opacity" }}
-      >
-        {char === " " ? "\u00A0" : char}
-      </motion.span>
-    ));
-  };
-
   return (
     <motion.section
       ref={ref}
@@ -152,31 +178,33 @@ const HeroSection = () => {
           className="relative z-10 max-w-4xl mx-auto px-6 sm:px-12 lg:px-16 text-center py-12"
           variants={heroContainerVariants}
         >
-          {/* Typewriter animated main heading */}
+          {/* Left-to-right fade animated main heading */}
           <motion.h1
             className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 tracking-tight !text-white"
-            variants={typewriterVariants}
+            variants={fadeRevealVariants}
             style={{ willChange: "transform" }}
           >
-            {splitText("Hello, I'm Rosina")}
+            Hello, I&apos;m Rosina
           </motion.h1>
 
           <motion.h2
             className="text-lg sm:text-xl lg:text-2xl font-semibold leading-tight mb-6 tracking-tight !text-white/90 max-w-3xl mx-auto"
-            variants={heroItemVariants}
+            variants={blurRevealVariants}
             style={{ willChange: "transform, opacity" }}
           >
-            User-centred strategist with a proven track record of driving
-            measurable results
+            {splitTextIntoWords(
+              "User-centred strategist with a proven track record of driving measurable results"
+            )}
           </motion.h2>
 
           <motion.p
             className="text-base sm:text-lg lg:text-xl font-medium mb-12 !text-white/80 max-w-3xl mx-auto leading-relaxed"
-            variants={heroItemVariants}
+            variants={blurRevealVariants}
             style={{ willChange: "transform, opacity" }}
           >
-            I&apos;m a Product Designer who turns early-stage ideas into
-            user-loved products that businesses rely on.
+            {splitTextIntoWords(
+              "I&apos;m a Product Designer who turns early-stage ideas into user-loved products that businesses rely on."
+            )}
           </motion.p>
 
           <motion.div

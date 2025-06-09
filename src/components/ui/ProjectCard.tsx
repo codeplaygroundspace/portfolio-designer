@@ -29,12 +29,10 @@ export default function ProjectCard({
       <motion.article
         className="flex flex-col sm:flex-row gap-6 p-6 rounded-xl border border-[rgb(var(--border))] bg-[rgb(var(--background))] transition-all duration-300"
         initial={{
-          y: 0,
           boxShadow: "0 0 0 0 rgba(0, 0, 0, 0)",
           borderColor: "rgb(var(--border))",
         }}
         whileHover={{
-          y: -8,
           boxShadow:
             "0 20px 40px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(var(--accent), 0.2)",
           borderColor: "rgba(var(--accent), 0.4)",

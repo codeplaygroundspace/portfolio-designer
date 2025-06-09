@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const pathname = usePathname();
@@ -20,6 +21,29 @@ export default function Header() {
       // If on other pages, navigate to homepage with hash
       window.location.href = `/#${sectionId}`;
     }
+  };
+
+  // Animation variants for navigation links
+  const linkVariants = {
+    initial: {},
+    hover: {},
+  };
+
+  const underlineVariants = {
+    initial: {
+      scaleX: 0,
+      opacity: 0,
+    },
+    hover: {
+      scaleX: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 25,
+        duration: 0.3,
+      },
+    },
   };
 
   return (
@@ -46,31 +70,69 @@ export default function Header() {
           {/* Navigation */}
           <nav className="flex items-center space-x-6 sm:space-x-8">
             {isProjectPage && (
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-[rgb(var(--foreground-rgb))] hover:text-[rgb(var(--accent))] transition-colors duration-200 cursor-pointer"
+              <motion.div
+                variants={linkVariants}
+                initial="initial"
+                whileHover="hover"
+                className="relative"
               >
-                <ArrowLeft size={16} />
-                <span className="hidden sm:inline">Back to Home</span>
-                <span className="sm:hidden">Back</span>
-              </Link>
+                <Link
+                  href="/"
+                  className="inline-flex items-center gap-2 text-sm sm:text-base font-medium text-[rgb(var(--foreground-rgb))] hover:text-[rgb(var(--accent))] transition-colors duration-200 cursor-pointer"
+                >
+                  <motion.div
+                    whileHover={{ x: -2 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  >
+                    <ArrowLeft size={16} />
+                  </motion.div>
+                  <span className="hidden sm:inline">Back to Home</span>
+                  <span className="sm:hidden">Back</span>
+                </Link>
+                <motion.div
+                  className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[rgb(var(--accent))] origin-left"
+                  variants={underlineVariants}
+                />
+              </motion.div>
             )}
 
-            <button
-              onClick={() => handleScrollToSection("projects")}
-              className="text-sm sm:text-base font-medium text-[rgb(var(--foreground-rgb))] hover:text-[rgb(var(--accent))] transition-colors duration-200 focus:outline-none focus:text-[rgb(var(--accent))] cursor-pointer"
-              type="button"
+            <motion.div
+              variants={linkVariants}
+              initial="initial"
+              whileHover="hover"
+              className="relative"
             >
-              {isProjectPage ? "All Projects" : "Projects"}
-            </button>
+              <button
+                onClick={() => handleScrollToSection("projects")}
+                className="text-sm sm:text-base font-medium text-[rgb(var(--foreground-rgb))] hover:text-[rgb(var(--accent))] transition-colors duration-200 focus:outline-none focus:text-[rgb(var(--accent))] cursor-pointer"
+                type="button"
+              >
+                {isProjectPage ? "All Projects" : "Projects"}
+              </button>
+              <motion.div
+                className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[rgb(var(--accent))] origin-center"
+                variants={underlineVariants}
+              />
+            </motion.div>
 
-            <button
-              onClick={() => handleScrollToSection("contact")}
-              className="text-sm sm:text-base font-medium text-[rgb(var(--foreground-rgb))] hover:text-[rgb(var(--accent))] transition-colors duration-200 focus:outline-none focus:text-[rgb(var(--accent))] cursor-pointer"
-              type="button"
+            <motion.div
+              variants={linkVariants}
+              initial="initial"
+              whileHover="hover"
+              className="relative"
             >
-              Contact
-            </button>
+              <button
+                onClick={() => handleScrollToSection("contact")}
+                className="text-sm sm:text-base font-medium text-[rgb(var(--foreground-rgb))] hover:text-[rgb(var(--accent))] transition-colors duration-200 focus:outline-none focus:text-[rgb(var(--accent))] cursor-pointer"
+                type="button"
+              >
+                Contact
+              </button>
+              <motion.div
+                className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[rgb(var(--accent))] origin-center"
+                variants={underlineVariants}
+              />
+            </motion.div>
           </nav>
         </div>
       </div>
