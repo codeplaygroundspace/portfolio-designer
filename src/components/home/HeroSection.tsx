@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowDown, Mail } from "lucide-react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { heroContent } from "@/data/homepage-content";
 
 const HeroSection = () => {
   const ref = useRef(null);
@@ -159,8 +160,8 @@ const HeroSection = () => {
         {/* Background Image */}
         <motion.div className="absolute inset-0" variants={backgroundVariants}>
           <Image
-            src="/GradientHeroPrerender2.svg"
-            alt="Hero background"
+            src={heroContent.backgroundImage.src}
+            alt={heroContent.backgroundImage.alt}
             fill
             className="object-cover"
             priority
@@ -184,7 +185,7 @@ const HeroSection = () => {
             variants={fadeRevealVariants}
             style={{ willChange: "transform" }}
           >
-            Hello, I&apos;m Rosina
+            {heroContent.headline.greeting}
           </motion.h1>
 
           <motion.h2
@@ -192,9 +193,7 @@ const HeroSection = () => {
             variants={blurRevealVariants}
             style={{ willChange: "transform, opacity" }}
           >
-            {splitTextIntoWords(
-              "User-centred strategist with a proven track record of driving measurable results"
-            )}
+            {splitTextIntoWords(heroContent.headline.subtitle)}
           </motion.h2>
 
           <motion.p
@@ -202,23 +201,21 @@ const HeroSection = () => {
             variants={blurRevealVariants}
             style={{ willChange: "transform, opacity" }}
           >
-            {splitTextIntoWords(
-              "I&apos;m a Product Designer who turns early-stage ideas into user-loved products that businesses rely on."
-            )}
+            {splitTextIntoWords(heroContent.description)}
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-4 sm:mx-0"
+            className="flex flex-col md:flex-row gap-4 justify-center items-center px-4 md:px-0"
             variants={heroItemVariants}
             style={{ willChange: "transform, opacity" }}
           >
-            <div>
+            <div className="w-full md:w-auto">
               <Link
-                href="#projects"
-                className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-white/30 hover:border-white transition-all duration-300 backdrop-blur-sm w-full sm:w-auto"
+                href={heroContent.cta.primary.href}
+                className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-white/30 hover:border-white transition-all duration-300 backdrop-blur-sm w-full"
               >
                 <span className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-6 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all duration-200 w-full text-base">
-                  View My Work
+                  {heroContent.cta.primary.text}
                   <motion.div
                     animate={{ y: [0, 3, 0] }}
                     transition={{
@@ -233,13 +230,13 @@ const HeroSection = () => {
               </Link>
             </div>
 
-            <div>
+            <div className="w-full md:w-auto">
               <Link
-                href="#contact"
-                className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-white/30 hover:border-white transition-all duration-300 backdrop-blur-sm w-full sm:w-auto"
+                href={heroContent.cta.secondary.href}
+                className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-white/30 hover:border-white transition-all duration-300 backdrop-blur-sm w-full"
               >
                 <span className="inline-flex items-center justify-center gap-2 bg-black/80 text-white px-6 py-4 rounded-lg font-semibold hover:bg-black/70 transition-all duration-200 w-full text-base">
-                  Get In Touch
+                  {heroContent.cta.secondary.text}
                   <Mail size={18} />
                 </span>
               </Link>

@@ -8,9 +8,19 @@ export const heroContent = {
   description:
     "I’m a Product Designer who turns early-stage ideas into user-loved products that businesses rely on.",
   location: "Bristol, UK",
+  backgroundImage: {
+    src: "/GradientHeroPrerender2.svg",
+    alt: "Hero background",
+  },
   cta: {
-    primary: "View My Work",
-    secondary: "Let's Connect",
+    primary: {
+      text: "View My Work",
+      href: "#projects",
+    },
+    secondary: {
+      text: "Get In Touch",
+      href: "#contact",
+    },
   },
 };
 
