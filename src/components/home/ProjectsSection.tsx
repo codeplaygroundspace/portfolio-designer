@@ -63,7 +63,7 @@ const ProjectsSection = () => {
         {projectsContent.title}
       </motion.h2>
       <motion.div
-        className="grid gap-6 sm:gap-8 lg:gap-12"
+        className="grid gap-8 sm:gap-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.05, margin: "-150px" }}
