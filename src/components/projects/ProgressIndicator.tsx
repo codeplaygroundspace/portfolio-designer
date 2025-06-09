@@ -18,9 +18,9 @@ const ProgressIndicator = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 left-0 w-full h-2 bg-[rgb(var(--background-secondary))] z-50">
+    <div className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-[rgb(var(--accent))]/20 via-pink-500/20 to-[rgb(var(--accent))]/20 z-50">
       <div
-        className="h-full bg-[rgb(var(--accent))] transition-all duration-150 ease-out shadow-sm"
+        className="h-full bg-gradient-to-r from-[rgb(var(--accent))] via-pink-500 to-[rgb(var(--accent))]/80 transition-all duration-150 ease-out shadow-sm"
         style={{
           width: `${scrollProgress}%`,
         }}

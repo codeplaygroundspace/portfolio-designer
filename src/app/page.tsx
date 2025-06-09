@@ -52,58 +52,53 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-      <div className="flex flex-col lg:flex-row lg:items-center gap-8 lg:gap-16">
-        <div className="flex-1">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-6 tracking-tight text-balance">
-            {heroContent.headline.greeting} <br />
+    <section className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[rgb(var(--accent))] via-pink-500 to-[rgb(var(--accent))]/80 min-h-[70vh] flex items-center justify-center">
+        {/* Background Image */}
+        <Image
+          src="/GradientHeroPrerender2.svg"
+          alt="Hero background"
+          fill
+          className="absolute inset-0 object-cover"
+          priority
+        />
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/20"></div>
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl mx-auto px-8 sm:px-12 lg:px-16 text-center py-16">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 tracking-tight !text-white">
+            Hello, I&apos;m Rosina
           </h1>
-          <h3 className="text-sm sm:text-base font-bold leading-tight mb-6 tracking-tight text-balance text-[rgb(var(--foreground-secondary))]">
-            {heroContent.headline.subtitle}
-          </h3>
 
-          <p className="text-base sm:text-lg font-medium mb-8 text-[rgb(var(--foreground-secondary))] max-w-2xl leading-relaxed">
-            {heroContent.description}
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold leading-tight mb-6 tracking-tight !text-white/90 max-w-3xl mx-auto">
+            User-centred strategist with a proven track record of driving
+            measurable results
+          </h2>
+
+          <p className="text-base sm:text-lg lg:text-xl font-medium mb-12 !text-white/80 max-w-3xl mx-auto leading-relaxed">
+            I&apos;m a Product Designer who turns early-stage ideas into
+            user-loved products that businesses rely on.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 bg-[rgb(var(--accent))] text-white px-6 py-3 rounded-lg font-medium hover:bg-[rgb(var(--accent))]/90 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-white/30 hover:border-white transition-all duration-300 backdrop-blur-sm"
             >
-              {heroContent.cta.primary}
-              <ArrowDown size={16} />
+              <span className="inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-6 py-4 rounded-lg font-semibold hover:bg-white/90 transition-all duration-200 w-full text-base">
+                View My Work
+                <ArrowDown size={18} />
+              </span>
             </Link>
             <Link
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 border border-[rgb(var(--border))] px-6 py-3 rounded-lg font-medium hover:bg-[rgb(var(--background-secondary))] transition-all duration-200 hover:border-[rgb(var(--accent))]/30"
+              className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-white/30 hover:border-white transition-all duration-300 backdrop-blur-sm"
             >
-              {heroContent.cta.secondary}
-              <Mail size={16} />
+              <span className="inline-flex items-center justify-center gap-2 bg-black/80 text-white px-6 py-4 rounded-lg font-semibold hover:bg-black/70 transition-all duration-200 w-full text-base">
+                Get In Touch
+                <Mail size={18} />
+              </span>
             </Link>
-          </div>
-        </div>
-
-        <div className="lg:w-80 xl:w-96 flex-shrink-0">
-          <div className="relative">
-            <div className="w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[rgb(var(--accent))]/10 to-[rgb(var(--accent))]/5 p-2">
-              <Image
-                src="/profile.jpeg"
-                alt="Rosina Pissaco - Product Designer"
-                width={400}
-                height={400}
-                priority
-                className="w-full h-full object-cover rounded-xl"
-              />
-            </div>
-            <div className="absolute -bottom-4 -right-4 bg-[rgb(var(--background))] border border-[rgb(var(--border))] rounded-lg px-3 py-2 shadow-lg">
-              <div className="flex items-center gap-2">
-                <MapPin size={14} className="text-[rgb(var(--accent))]" />
-                <span className="text-sm font-medium">
-                  {heroContent.location}
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -127,35 +122,25 @@ function AboutSection() {
             ))}
           </div>
         </div>
-        <div className="lg:flex-1 space-y-6 sm:space-y-8">
-          <div>
-            <h3 className="font-semibold mb-3 sm:mb-4 text-[rgb(var(--header-color-rgb))] text-sm sm:text-base">
-              {aboutContent.skills.title}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {aboutContent.skills.items.map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-2 bg-[rgb(var(--background-secondary))] rounded-full text-xs sm:text-sm font-medium border border-[rgb(var(--border))]"
-                >
-                  {skill}
-                </span>
-              ))}
+        <div className="lg:w-80 xl:w-96 flex-shrink-0">
+          <div className="relative">
+            <div className="w-full aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-[rgb(var(--primary))]/10 to-[rgb(var(--primary))]/5 p-2">
+              <Image
+                src="/profile.jpeg"
+                alt="Rosina Pissaco - Product Designer"
+                width={400}
+                height={400}
+                priority
+                className="w-full h-full object-cover rounded-xl"
+              />
             </div>
-          </div>
-          <div>
-            <h3 className="font-semibold mb-3 sm:mb-4 text-[rgb(var(--header-color-rgb))] text-sm sm:text-base">
-              {aboutContent.tools.title}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {aboutContent.tools.items.map((tool) => (
-                <span
-                  key={tool}
-                  className="px-3 py-2 bg-[rgb(var(--background-secondary))] rounded-full text-xs sm:text-sm font-medium border border-[rgb(var(--border))]"
-                >
-                  {tool}
+            <div className="absolute -bottom-4 -right-4 bg-[rgb(var(--background))] border border-[rgb(var(--border))] rounded-lg px-3 py-2 shadow-lg">
+              <div className="flex items-center gap-2">
+                <MapPin size={14} className="text-[rgb(var(--primary))]" />
+                <span className="text-sm font-medium">
+                  {heroContent.location}
                 </span>
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -173,13 +158,10 @@ function ProjectsSection() {
 
   return (
     <section className="lg:w-2/3" id="projects">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4 mb-6 sm:mb-8">
+      <div className="mb-6 sm:mb-8">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-balance">
           {projectsContent.title}
         </h2>
-        <span className="text-sm font-medium text-[rgb(var(--foreground-secondary))] shrink-0">
-          {projectsWithDescriptions.length} {projectsContent.subtitle}
-        </span>
       </div>
       <div className="grid gap-6 sm:gap-8 lg:gap-12">
         {projectsWithDescriptions.map((project, index) => (
@@ -250,7 +232,7 @@ function ExperienceCard({
             {role}
           </h4>
           {company && (
-            <p className="text-[rgb(var(--accent))] font-medium text-sm sm:text-base mb-2">
+            <p className="text-[rgb(var(--foreground-secondary))] font-medium text-sm sm:text-base mb-2">
               {company}
             </p>
           )}
@@ -283,19 +265,23 @@ function ContactSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a
             href={contactContent.cta.primary.href}
-            className="inline-flex items-center gap-2 bg-[rgb(var(--accent))] text-white px-6 py-3 rounded-lg font-medium hover:bg-[rgb(var(--accent))]/90 transition-colors duration-200"
+            className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-[rgb(var(--foreground))]/30 hover:border-[rgb(var(--foreground))] transition-all duration-300 backdrop-blur-sm"
           >
-            <Mail size={16} />
-            {contactContent.cta.primary.text}
+            <span className="inline-flex items-center justify-center gap-2 bg-white dark:bg-white text-gray-900 dark:text-gray-900 px-6 py-4 rounded-lg font-semibold hover:bg-white/90 dark:hover:bg-white/90 transition-all duration-200 w-full text-base">
+              <Mail size={18} />
+              {contactContent.cta.primary.text}
+            </span>
           </a>
           <a
             href={contactContent.cta.secondary.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-[rgb(var(--border))] px-6 py-3 rounded-lg font-medium hover:bg-[rgb(var(--background-secondary))] transition-colors duration-200"
+            className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-[rgb(var(--foreground))]/30 hover:border-[rgb(var(--foreground))] transition-all duration-300 backdrop-blur-sm"
           >
-            <Linkedin size={16} />
-            {contactContent.cta.secondary.text}
+            <span className="inline-flex items-center justify-center gap-2 bg-black/80 dark:bg-black/80 text-white dark:text-white px-6 py-4 rounded-lg font-semibold hover:bg-black/70 dark:hover:bg-black/70 transition-all duration-200 w-full text-base">
+              <Linkedin size={18} />
+              {contactContent.cta.secondary.text}
+            </span>
           </a>
         </div>
       </div>

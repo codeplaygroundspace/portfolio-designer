@@ -1,14 +1,14 @@
 "use client";
 import { useState, useEffect } from "react";
-import { FiSun, FiMonitor, FiMoon } from "react-icons/fi";
+import { FiSun, FiMoon } from "react-icons/fi";
 
-type Theme = "light" | "dark" | "system";
+type Theme = "light" | "dark";
 
 export default function Footer() {
-  const [theme, setTheme] = useState<Theme>("system");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   useEffect(() => {
-    const savedTheme = (localStorage.getItem("theme") as Theme) || "system";
+    const savedTheme = (localStorage.getItem("theme") as Theme) || "dark";
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, []);
@@ -31,7 +31,6 @@ export default function Footer() {
         >
           {[
             { name: "light" as const, icon: FiSun },
-            { name: "system" as const, icon: FiMonitor },
             { name: "dark" as const, icon: FiMoon },
           ].map(({ name, icon: Icon }) => (
             <button

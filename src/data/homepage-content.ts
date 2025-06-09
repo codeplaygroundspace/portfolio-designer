@@ -3,10 +3,10 @@ export const heroContent = {
   headline: {
     greeting: "Hello, I'm Rosina",
     subtitle:
-      "Strategic Product Designer & Growth Catalyst. User-centered strategist and design leader with a proven track record of driving measurable results",
+      "User-centred strategist with a proven track record of driving measurable results",
   },
   description:
-    "I am a product designer who transforms early-stage ideas into products that users love and businesses depend on. With 10+ years of experience, I specialise in 0-1 product development, user research, and working with cross-functional teams to deliver meaningful impact. My expertise spans the full design process - from initial concept through to launch - with a focus on creating intuitive experiences that drive real business growth. I thrive on solving complex challenges for ambitious startups, using human-centred design to create products that matter rather than just pretty interfaces.",
+    "I’m a Product Designer who turns early-stage ideas into user-loved products that businesses rely on.",
   location: "Bristol, UK",
   cta: {
     primary: "View My Work",
@@ -17,9 +17,11 @@ export const heroContent = {
 export const aboutContent = {
   title: "About Me",
   paragraphs: [
-    "I'm a Product Designer with 10+ years of experience helping companies create products that drive real business results. I've increased user retention by 30%, improved efficiency by 35%, and reduced user friction across multiple platforms.",
-    "Currently, I'm the sole Product Designer at NestEgg, where I work across B2B, B2C, and internal platforms to help Credit Unions and Social Banks make better financial decisions. I love the challenge of designing for complex financial workflows while keeping the user experience simple and intuitive.",
+    "With over 10 years of experience, I’ve helped companies create products that deliver real business outcomes. I’ve increased user retention by 30%, improved efficiency by 35%, and reduced user friction across various platforms.",
+    "I specialise in 0 to 1 product development, user research, and collaborating with cross-functional teams to deliver impactful results. From concept to launch, I focus on creating intuitive experiences that drive business growth.",
+    "Currently, I’m the sole product designer at NestEgg, where I design for B2B, B2C, and internal platforms. We help Credit Unions and Social Banks make smarter financial decisions. I enjoy the challenge of simplifying complex financial workflows while ensuring a seamless and intuitive user experience.",
   ],
+
   skills: {
     title: "Core Skills",
     items: [
