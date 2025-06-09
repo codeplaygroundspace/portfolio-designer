@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Download, Calendar } from "lucide-react";
+import { Download, Calendar } from "lucide-react";
 import { FaDribbble } from "react-icons/fa";
 import experiences from "@/data/experiences";
 import { resumeContent } from "@/data/homepage-content";
@@ -49,7 +49,7 @@ const ExperienceCard = ({
   isLatest,
 }: ExperienceProps & { company: string; isLatest: boolean }) => {
   return (
-    <div className="relative p-4 sm:p-5 rounded-lg border border-[rgb(var(--border))] hover:bg-[rgb(var(--background-secondary))] transition-colors duration-200">
+    <div className="relative p-4 sm:p-5 rounded-lg border border-[rgb(var(--border))] transition-colors duration-200">
       {isLatest && (
         <div className="absolute -top-2 -right-2 bg-[rgb(var(--accent))] text-white text-xs px-2 py-1 rounded-full font-medium">
           Current
@@ -89,10 +89,6 @@ const ResumeDownloadLink = () => {
     >
       <Download size={16} className="text-[rgb(var(--accent))] shrink-0" />
       <span className="font-medium flex-1">{resumeContent.text}</span>
-      <ArrowUpRight
-        size={14}
-        className="text-[rgb(var(--foreground-secondary))] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200 shrink-0"
-      />
     </motion.a>
   );
 };
@@ -110,10 +106,6 @@ const DribbbleLink = () => {
     >
       <FaDribbble size={16} className="text-[rgb(var(--accent))] shrink-0" />
       <span className="font-medium flex-1">View on Dribbble</span>
-      <ArrowUpRight
-        size={14}
-        className="text-[rgb(var(--foreground-secondary))] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200 shrink-0"
-      />
     </motion.a>
   );
 };

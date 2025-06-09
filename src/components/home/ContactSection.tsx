@@ -57,12 +57,12 @@ const ContactSection = () => {
           {contactContent.description}
         </motion.p>
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-4 sm:mx-0"
           variants={containerVariants}
         >
           <motion.a
             href={contactContent.cta.primary.href}
-            className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-[rgb(var(--foreground))]/30 hover:border-[rgb(var(--foreground))] transition-all duration-300 backdrop-blur-sm"
+            className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-[rgb(var(--foreground))]/30 hover:border-[rgb(var(--foreground))] transition-all duration-300 backdrop-blur-sm w-full sm:w-auto"
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -76,7 +76,7 @@ const ContactSection = () => {
             href={contactContent.cta.secondary.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-[rgb(var(--foreground))]/30 hover:border-[rgb(var(--foreground))] transition-all duration-300 backdrop-blur-sm"
+            className="inline-flex items-center justify-center gap-2 p-1 rounded-xl border-[0.5px] border-[rgb(var(--foreground))]/30 hover:border-[rgb(var(--foreground))] transition-all duration-300 backdrop-blur-sm w-full sm:w-auto"
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
